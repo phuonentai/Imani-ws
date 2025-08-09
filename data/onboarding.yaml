@@ -1,13 +1,7 @@
-
-title: "Our Collaborative Onboarding Process"
-subtitle: "We believe in a partnership approach. Our onboarding is designed to align our expertise with your unique business context from day one."
 steps:
-  - title: "1. We Talk Requirements"
-    description: "We start with a deep dive into your goals, challenges, and data sources. This is a strategic conversation to understand what you need to achieve."
+  - key: "onboardingStep1"
     icon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path></svg>'
-  - title: "2. We Talk Tech"
-    description: "Our experts design the technical solution, from data integration pipelines to the architecture of your Power BI models. We ensure a robust and scalable setup."
+  - key: "onboardingStep2"
     icon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>'
-  - title: "3. We Talk Business"
-    description: "With the technology in place, we focus on driving business value. We train your team, interpret the insights, and fine-tune the dashboards to answer your most critical questions."
+  - key: "onboardingStep3"
     icon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>'

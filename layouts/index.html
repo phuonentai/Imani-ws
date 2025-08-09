@@ -10,10 +10,12 @@
 {{ end }}
 
 {{ define "scripts" }}
-    <script>
-        // Pass chart data from /data/ to the browser
-        window.chartData = {{ .Site.Data.charts.en | jsonify }};
+<script>
+        // Pass chart data from /data/ to the browser, depending on the current language
+        {{ $lang := .Site.Language.Lang }}
+        {{ $chartData := index .Site.Data.charts $lang }}
+        window.chartData = {{ $chartData | jsonify }};
     </script>
     {{ $chartsJS := resources.Get "js/charts.js" }}
-    <script src="{{ $chartsJS.RelPermalink }}"></script>
+    <script src="{{ $chartsJS.RelPermalink }}"></script
 {{ end }}

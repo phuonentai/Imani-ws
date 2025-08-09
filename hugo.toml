@@ -1,6 +1,36 @@
-baseURL = "https://www.your-informani-website.com/"
+baseURL = "https://kind-wave-0b3cd8603.2.azurestaticapps.net/"
 languageCode = "en-us"
 title = "Informani | Expert Financial Forecasting & Power BI Dashboards"
+
+
+
+# Set the default language
+defaultContentLanguage = "en"
+
+[languages]
+  [languages.en]
+    languageName = "English"
+    languageCode = "en-us"
+    weight = 1
+    [languages.en.params]
+      description = "Informani transforms complex financial data into clear, actionable forecasts. We combine expert talent with interactive Power BI dashboards to drive confident business decisions."
+  [languages.nl]
+    languageName = "Nederlands"
+    languageCode = "nl-nl"
+    weight = 2
+    [languages.nl.params]
+      description = "Informani transformeert complexe financiële data in duidelijke, actiegerichte prognoses. We combineren deskundig talent met interactieve Power BI-dashboards om zelfverzekerde zakelijke beslissingen te stimuleren."
+
+[languages.es]
+    languageName = "Español"
+    languageCode = "es-es"
+    weight = 3
+    [languages.es.params]
+      description = "Informani transforma datos financieros complejos en pronósticos claros y procesables. Combinamos talento experto con paneles interactivos de Power BI para impulsar decisiones comerciales seguras."
+
+
+
+
 
 [params]
     description = "Informani transforms complex financial data into clear, actionable forecasts. We combine expert talent with interactive Power BI dashboards to drive confident business decisions."
