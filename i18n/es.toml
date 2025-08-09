@@ -1,0 +1,83 @@
+# Navigation Links
+[scheduleDemo]
+other = "Programar una Demo"
+[navTheMethod]
+other = "El Método"
+[navOnboarding]
+other = "Onboarding"
+[navSecurity]
+other = "Seguridad"
+[navSolutions]
+other = "Soluciones"
+[navWhyUs]
+other = "Por Qué Nosotros"
+[allRightsReserved]
+other = "Todos los derechos reservados"
+
+# Hero & Charts
+[heroTitle]
+other = "Pronóstico Financiero, <br class=\"hidden md:block\" />Evolucionado."
+[heroSubtitle]
+other = "Transformamos tus datos en pronósticos interactivos y nítidos que permiten una toma de decisiones segura."
+[heroCTA]
+other = "Descubre el Método"
+[chartTab1]
+other = "Ingresos Mensuales"
+[chartTab2]
+other = "Flujo de Caja"
+[chartTab3]
+other = "Crecimiento de Clientes"
+
+# Sections
+[socialProofTitle]
+other = "Con la confianza de equipos financieros líderes"
+[methodTitle]
+other = "Del Caos a la Claridad en 3 Pasos"
+[methodSubtitle]
+other = "Nuestro proceso está diseñado para un máximo impacto con mínima fricción. Nuestros servicios de pronóstico financiero hacen el trabajo pesado para que tú te concentres en los resultados."
+[viewMinicase]
+other = "Ver mini-caso"
+
+# Contact Form
+[contactTitle]
+other = "¿Listo para la Claridad?"
+[formFullName]
+other = "Nombre Completo"
+[formBusinessEmail]
+other = "Email de Empresa"
+[formSubmit]
+other = "Solicitar Mi Demo"
+[formSuccessMsg]
+other = "¡Gracias por tu solicitud! Nos pondremos en contacto en 24 horas."
+
+# Onboarding Section
+[onboardingTitle]
+other = "Nuestro Proceso de Onboarding Colaborativo"
+[onboardingSubtitle]
+other = "Creemos en un enfoque de colaboración. Nuestro onboarding está diseñado para alinear nuestra experiencia con tu contexto de negocio único desde el primer día."
+[onboardingStep1Title]
+other = "1. Hablamos de Requisitos"
+[onboardingStep1Desc]
+other = "Comenzamos con un análisis profundo de tus metas, desafíos y fuentes de datos. Esta es una conversación estratégica para entender lo que necesitas lograr."
+[onboardingStep2Title]
+other = "2. Hablamos de Tecnología"
+[onboardingStep2Desc]
+other = "Nuestros expertos diseñan la solución técnica, desde la integración de datos hasta la arquitectura de tus modelos de Power BI. Aseguramos una configuración robusta y escalable."
+[onboardingStep3Title]
+other = "3. Hablamos de Negocio"
+[onboardingStep3Desc]
+other = "Con la tecnología implementada, nos enfocamos en generar valor de negocio. Capacitamos a tu equipo, interpretamos los resultados y ajustamos los paneles para responder a tus preguntas más críticas."
+
+# Security Section
+[securityTitle]
+other = "Seguridad y Cumplimiento Líderes en la Industria"
+[securitySubtitle]
+other = "Tus datos financieros son tu activo más crítico. Los protegemos con los más altos estándares de seguridad y un compromiso con el cumplimiento normativo."
+
+# Footer Social Links (for screen readers)
+[footerSRX]
+other = "X"
+[footerSRLinkedIn]
+other = "LinkedIn"
+[footerSRFacebook]
+other = "Facebook"

@@ -45,3 +45,33 @@ other = "Business Email"
 other = "Request My Demo"
 [formSuccessMsg]
 other = "Thank you for your request! We will be in touch within 24 hours."
+
+
+
+[ourCoreServices]
+other = "Our Core Services"
+[seeSolutionsAction]
+other = "See Our Solutions in Action"
+[letUsShowYou]
+other = "Let us show you how we can transform your financial data into a strategic asset."
+
+
+# Onboarding Section
+[onboardingTitle]
+other = "Our Collaborative Onboarding Process"
+[onboardingSubtitle]
+other = "We believe in a partnership approach. Our onboarding is designed to align our expertise with your unique business context from day one."
+
+# Onboarding Steps
+[onboardingStep1Title]
+other = "1. We Talk Requirements"
+[onboardingStep1Desc]
+other = "We start with a deep dive into your goals, challenges, and data sources. This is a strategic conversation to understand what you need to achieve."
+[onboardingStep2Title]
+other = "2. We Talk Tech"
+[onboardingStep2Desc]
+other = "Our experts design the technical solution, from data integration pipelines to the architecture of your Power BI models. We ensure a robust and scalable setup."
+[onboardingStep3Title]
+other = "3. We Talk Business"
+[onboardingStep3Desc]
+other = "With the technology in place, we focus on driving business value. We train your team, interpret the insights, and fine-tune the dashboards to answer your most critical questions."

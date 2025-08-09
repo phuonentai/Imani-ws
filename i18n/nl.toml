@@ -45,3 +45,30 @@ other = "Zakelijke E-mail"
 other = "Vraag mijn Demo aan"
 [formSuccessMsg]
 other = "Bedankt voor uw aanvraag! We nemen binnen 24 uur contact met u op."
+
+[ourCoreServices]
+other = "Onze Kerndiensten"
+[seeSolutionsAction]
+other = "Bekijk Onze Oplossingen in Actie"
+[letUsShowYou]
+other = "Laat ons u tonen hoe we uw financiële data kunnen omzetten in een strategische troef."
+
+# Onboarding Section
+[onboardingTitle]
+other = "Ons Collaboratieve Onboardingproces"
+[onboardingSubtitle]
+other = "Wij geloven in een partnerschapsaanpak. Onze onboarding is ontworpen om onze expertise vanaf dag één af te stemmen op uw unieke bedrijfscontext."
+
+# Onboarding Steps
+[onboardingStep1Title]
+other = "1. We Bespreken Vereisten"
+[onboardingStep1Desc]
+other = "We beginnen met een grondige analyse van uw doelen, uitdagingen en databronnen. Dit is een strategisch gesprek om te begrijpen wat u wilt bereiken."
+[onboardingStep2Title]
+other = "2. We Bespreken Technologie"
+[onboardingStep2Desc]
+other = "Onze experts ontwerpen de technische oplossing, van data-integratiepijplijnen tot de architectuur van uw Power BI-modellen. We zorgen voor een robuuste en schaalbare opzet."
+[onboardingStep3Title]
+other = "3. We Bespreken de Business"
+[onboardingStep3Desc]
+other = "Met de technologie op zijn plaats, richten we ons op het creëren van bedrijfswaarde. We trainen uw team, interpreteren de inzichten en optimaliseren de dashboards om uw meest kritische vragen te beantwoorden."
