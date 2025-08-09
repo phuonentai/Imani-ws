@@ -1,28 +1,36 @@
-
-{{ with .GetPage "/sections/talent" }}
 <section id="talent" class="py-24 md:py-32">
     <div class="container mx-auto px-6">
-        <div class="grid md:grid-cols-2 gap-16 items-center">
-            <div>
-                <h2 class="text-3xl md:text-4xl font-bold font-serif mb-4">{{ .Title }}</h2>
-                <p class="text-lg text-gray-600">{{ .Content }}</p>
-            </div>
-            <div class="grid grid-cols-2 gap-4">
-                {{ range .Resources.ByType "page" }}
-                <div class="talent-card cursor-pointer group {{ if (modBool .Weight 2) }}mt-8{{ end }}" 
-                    data-name="{{ .Params.name }}" 
-                    data-title="{{ .Params.title }}" 
-                    data-bio="{{ .Params.bio }}">
-                    {{ with .Resources.GetMatch .Params.image }}
-                        {{ $img := .Fill "400x400" }}
-                        <img src="{{ $img.RelPermalink }}" alt="Portrait of {{ .Params.name }}" class="rounded-lg w-full h-auto grayscale group-hover:grayscale-0 transition duration-300">
-                    {{ else }}
-                        <img src="https://placehold.co/400x400/121212/FFFFFF?text={{ .Params.initials }}" alt="Portrait of {{ .Params.name }}" class="rounded-lg w-full h-auto grayscale group-hover:grayscale-0 transition duration-300">
-                    {{ end }}
-                </div>
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold font-serif mb-4">{{ i18n "talentTitle" }}</h2>
+            <p class="text-lg text-gray-600">{{ i18n "talentSubtitle" }}</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 justify-center max-w-3xl mx-auto">
+            {{/* Loop through members defined in the data file */}}
+            {{ range .Site.Data.talent.members }}
+                {{/* Dynamically create the translation keys */}}
+                {{ $nameKey := printf "%sName" .key }}
+                {{ $titleKey := printf "%sTitle" .key }}
+                {{ $bioKey := printf "%sBio" .key }}
+
+            <div class="talent-card text-center cursor-pointer group"
+                 data-name="{{ i18n $nameKey }}"
+                 data-title="{{ i18n $titleKey }}"
+                 data-bio="{{ i18n $bioKey }}">
+
+                {{/* Check if the image file exists to provide a robust fallback */}}
+                {{ $imagePath := .image }}
+                {{ if and ($imagePath) (fileExists (printf "static%s" $imagePath)) }}
+                    <img src="{{ $imagePath | relURL }}" alt="Portrait of {{ i18n $nameKey }}" class="rounded-full w-48 h-48 mx-auto mb-4 object-cover shadow-lg group-hover:shadow-xl transition-shadow duration-300">
+                {{ else }}
+                    <div class="rounded-full w-48 h-48 mx-auto mb-4 bg-secondary flex items-center justify-center shadow-lg group-hover:shadow-xl transition-shadow duration-300">
+                        <span class="text-5xl font-serif text-gray-500">{{ .initials }}</span>
+                    </div>
                 {{ end }}
+                <h3 class="font-serif text-2xl font-semibold">{{ i18n $nameKey }}</h3>
+                <p class="text-accent-color font-medium">{{ i18n $titleKey }}</p>
             </div>
+            {{ end }}
         </div>
     </div>
 </section>
-{{ end }}

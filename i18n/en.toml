@@ -94,6 +94,30 @@ other = "GDPR Compliant"
 other = "We are fully compliant with the General Data Protection Regulation, guaranteeing the privacy and protection of all personal data for our EU-based clients."
 [securityFeature3Title]
 other = "NIS2 Ready"
+
+
+# Talent Section
+[talentTitle]
+other = "Why Our Talent is Your Advantage"
+[talentSubtitle]
+other = "We're not just consultants; we are an extension of your team. A collective of seasoned financial analysts and data visualization experts, our talent is dedicated to one thing: turning your complex data into a strategic asset."
+
+# Alex Doe
+[talentAlexDoeName]
+other = "Alex Doe"
+[talentAlexDoeTitle]
+other = "Lead Financial Strategist"
+[talentAlexDoeBio]
+other = "With over a decade of experience in FP&A for high-growth tech startups, Alex is an expert at building financial models that drive strategic decisions. He specializes in cash flow forecasting and scenario analysis."
+
+# Jane Smith
+[talentJaneSmithName]
+other = "Jane Smith"
+[talentJaneSmithTitle]
+other = "Head of Data Visualization"
+[talentJaneSmithBio]
+other = "Jane lives at the intersection of data and design. She is a certified Power BI professional who excels at creating intuitive, powerful dashboards that provide at-a-glance clarity for complex business questions."
+
 [securityFeature3Desc]
 other = "We proactively align with the NIS2 Directive's requirements, implementing robust cybersecurity measures to protect critical services and infrastructure."
 

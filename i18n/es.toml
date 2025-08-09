@@ -95,3 +95,26 @@ other = "X"
 other = "LinkedIn"
 [footerSRFacebook]
 other = "Facebook"
+
+
+# Talent Section
+[talentTitle]
+other = "Por Qué Nuestro Talento es Su Ventaja"
+[talentSubtitle]
+other = "No somos solo consultores; somos una extensión de su equipo. Un colectivo de analistas financieros experimentados y expertos en visualización de datos, nuestro talento está dedicado a una cosa: convertir sus datos complejos en un activo estratégico."
+
+# Alex Doe
+[talentAlexDoeName]
+other = "Alex Doe"
+[talentAlexDoeTitle]
+other = "Estratega Financiero Principal"
+[talentAlexDoeBio]
+other = "Con más de una década de experiencia en FP&A para startups tecnológicas de alto crecimiento, Alex es un experto en la construcción de modelos financieros que impulsan decisiones estratégicas. Se especializa en pronósticos de flujo de caja y análisis de escenarios."
+
+# Jane Smith
+[talentJaneSmithName]
+other = "Jane Smith"
+[talentJaneSmithTitle]
+other = "Jefa de Visualización de Datos"
+[talentJaneSmithBio]
+other = "Jane vive en la intersección de los datos y el diseño. Es una profesional certificada en Power BI que sobresale en la creación de paneles intuitivos y potentes que brindan claridad de un vistazo para preguntas comerciales complejas."
