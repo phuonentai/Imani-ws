@@ -16,35 +16,23 @@ title = "Informani | Expert Financial Forecasting & Power BI Dashboards"
 [menu]
   [[menu.main]]
     name = "The Method"
-    url = "#methode"
+    url = "/#methode" # ✅ CHANGED
     weight = 10
   [[menu.main]]
     name = "Onboarding"
-    url = "#onboarding"
+    url = "/#onboarding" # ✅ CHANGED
     weight = 20
-  
-  
-  
-  
   [[menu.main]]
     name = "Security"
-    url = "#security"
+    url = "/#security" # ✅ CHANGED
     weight = 30
-
-
-
-
-[[menu.main]]
-  name = "Solutions"
-  url = "/solutions/"
-  weight = 40
-  # Add this block to identify it as the mega menu trigger
-[menu.main.params]
+  [[menu.main]]
+    name = "Solutions"
+    url = "/solutions/" # This link is already correct
+    weight = 40
+    [menu.main.params]
       has_megamenu = true
-
-
-
-[[menu.main]]
+  [[menu.main]]
     name = "Why Us"
-    url = "#talent"
+    url = "/#talent" # ✅ CHANGED
     weight = 50
