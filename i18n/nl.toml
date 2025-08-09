@@ -72,3 +72,23 @@ other = "Onze experts ontwerpen de technische oplossing, van data-integratiepijp
 other = "3. We Bespreken de Business"
 [onboardingStep3Desc]
 other = "Met de technologie op zijn plaats, richten we ons op het creëren van bedrijfswaarde. We trainen uw team, interpreteren de inzichten en optimaliseren de dashboards om uw meest kritische vragen te beantwoorden."
+
+# Security Section
+[securityTitle]
+other = "Toonaangevende Beveiliging & Compliance"
+[securitySubtitle]
+other = "Uw financiële data is uw meest kritieke bezit. We beschermen deze met de hoogste beveiligingsstandaarden en een toewijding aan naleving van regelgeving."
+
+# Security Features
+[securityFeature1Title]
+other = "ISO 27001 Gecertificeerd"
+[securityFeature1Desc]
+other = "Ons Information Security Management System (ISMS) is gecertificeerd volgens de ISO 27001-norm, wat zorgt voor systematisch risicobeheer en gegevensbescherming."
+[securityFeature2Title]
+other = "AVG-conform"
+[securityFeature2Desc]
+other = "We voldoen volledig aan de Algemene Verordening Gegevensbescherming, waardoor de privacy en bescherming van alle persoonsgegevens voor onze EU-klanten wordt gegarandeerd."
+[securityFeature3Title]
+other = "Klaar voor NIS2"
+[securityFeature3Desc]
+other = "We stemmen ons proactief af op de vereisten van de NIS2-richtlijn en implementeren robuuste cyberbeveiligingsmaatregelen om kritieke diensten en infrastructuur te beschermen."
