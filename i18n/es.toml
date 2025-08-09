@@ -74,6 +74,20 @@ other = "Seguridad y Cumplimiento Líderes en la Industria"
 [securitySubtitle]
 other = "Tus datos financieros son tu activo más crítico. Los protegemos con los más altos estándares de seguridad y un compromiso con el cumplimiento normativo."
 
+# Security Features
+[securityFeature1Title]
+other = "Certificado ISO 27001"
+[securityFeature1Desc]
+other = "Nuestro Sistema de Gestión de Seguridad de la Información (SGSI) está certificado bajo la norma ISO 27001, asegurando una gestión sistemática de riesgos y protección de datos."
+[securityFeature2Title]
+other = "Cumple con el GDPR"
+[securityFeature2Desc]
+other = "Cumplimos plenamente con el Reglamento General de Protección de Datos, garantizando la privacidad y protección de todos los datos personales de nuestros clientes en la UE."
+[securityFeature3Title]
+other = "Preparado para NIS2"
+[securityFeature3Desc]
+other = "Nos alineamos proactivamente con los requisitos de la Directiva NIS2, implementando medidas de ciberseguridad robustas para proteger los servicios e infraestructuras críticas."
+
 # Footer Social Links (for screen readers)
 [footerSRX]
 other = "X"

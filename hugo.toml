@@ -35,8 +35,8 @@ defaultContentLanguage = "en"
 [params]
     description = "Informani transforms complex financial data into clear, actionable forecasts. We combine expert talent with interactive Power BI dashboards to drive confident business decisions."
     author = "Informani Financials"
-    logo = "/images/logo.png" # Path relative to the static directory
-
+    logo = "/images/INFORMANI LOGO.webp" 
+    
     [params.address]
         street = "123 Finance Avenue"
         locality = "Amsterdam"
@@ -46,23 +46,28 @@ defaultContentLanguage = "en"
 [menu]
   [[menu.main]]
     name = "The Method"
-    url = "/#methode" # ✅ CHANGED
+    identifier = "navTheMethod" # Add this
+    url = "/#methode" 
     weight = 10
   [[menu.main]]
     name = "Onboarding"
+    identifier = "navOnboarding" # Add this
     url = "/#onboarding" # ✅ CHANGED
     weight = 20
   [[menu.main]]
     name = "Security"
+    identifier = "navSecurity" # Add this
     url = "/#security" # ✅ CHANGED
     weight = 30
   [[menu.main]]
     name = "Solutions"
+    identifier = "navSolutions" # Add this
     url = "/#solutions/" # This link is already correct
     weight = 40
     [menu.main.params]
       has_megamenu = true
   [[menu.main]]
     name = "Why Us"
+    identifier = "navWhyUs" # Add this
     url = "/#talent" # ✅ CHANGED
     weight = 50
