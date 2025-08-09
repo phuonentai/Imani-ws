@@ -1,83 +1,54 @@
 import os
-import json
+import re
 
 # --- Configuration ---
-# Data for the new pages we want to create
-NEW_PAGES = [
-    {
-        "name": "FP&A Outsourcing",
-        "slug": "fpa-outsourcing",
-        "description": "Leverage our expert team for your financial planning and analysis without the overhead of a full-time hire."
-    },
-    {
-        "name": "Power BI Dashboards",
-        "slug": "power-bi-dashboards",
-        "description": "Transform your raw data into interactive, real-time business insights with custom-built Power BI dashboards."
-    },
-    {
-        "name": "Data Integration",
-        "slug": "data-integration",
-        "description": "Consolidate your disparate data sources into a single source of truth for reliable and consistent reporting."
-    }
-]
-
-SOLUTIONS_JSON_PATH = 'data/menu/solutions.json'
-CONTENT_DIR = 'content/solutions'
+BASE_LANG_DIR = 'content/en'
+TARGET_LANG_DIR = 'content/nl'
 
 # --- Main Script Logic ---
 
-def update_menu_data():
-    """Updates the URLs in the solutions.json data file."""
-    print(f"Updating menu data in '{SOLUTIONS_JSON_PATH}'...")
-    try:
-        with open(SOLUTIONS_JSON_PATH, 'r') as f:
-            menu_data = json.load(f)
-    except FileNotFoundError:
-        print(f"ERROR: Could not find '{SOLUTIONS_JSON_PATH}'. Aborting.")
-        return False
+def create_placeholders():
+    """
+    Recursively scans the base language directory and creates placeholder 
+    files in the target language directory if they don't exist.
+    """
+    print(f"Syncing content from '{BASE_LANG_DIR}' to '{TARGET_LANG_DIR}'...")
+    created_count = 0
 
-    # Create a mapping of page names to their new URLs
-    url_map = {page['name']: f"/solutions/{page['slug']}/" for page in NEW_PAGES}
+    for root, _, files in os.walk(BASE_LANG_DIR):
+        for filename in files:
+            if not filename.endswith('.md'):
+                continue
 
-    # Update the URL for each matching entry in the menu data
-    for item in menu_data:
-        if item['name'] in url_map:
-            item['url'] = url_map[item['name']]
-            print(f"  - Set URL for '{item['name']}' to '{item['url']}'")
+            # Determine paths
+            base_filepath = os.path.join(root, filename)
+            relative_path = os.path.relpath(base_filepath, BASE_LANG_DIR)
+            target_filepath = os.path.join(TARGET_LANG_DIR, relative_path)
 
-    with open(SOLUTIONS_JSON_PATH, 'w') as f:
-        json.dump(menu_data, f, indent=2)
-    
-    return True
+            # Create target directory if it doesn't exist
+            os.makedirs(os.path.dirname(target_filepath), exist_ok=True)
 
-def create_content_files():
-    """Creates the new markdown files for the solution detail pages."""
-    print(f"\nCreating content files in '{CONTENT_DIR}'...")
-    os.makedirs(CONTENT_DIR, exist_ok=True)
+            # Check if the target file needs to be created
+            if not os.path.exists(target_filepath):
+                with open(base_filepath, 'r', encoding='utf-8') as f:
+                    content = f.read()
 
-    for page in NEW_PAGES:
-        # Define the content for the markdown file using an f-string
-        md_content = f"""---
-title: "{page['name']}"
-description: "{page['description']}"
----
+                # Create placeholder content
+                front_matter_match = re.match(r'---\s*$.*?---\s*$', content, re.DOTALL | re.MULTILINE)
+                if front_matter_match:
+                    front_matter = front_matter_match.group(0)
+                    placeholder_body = "\nDit is een placeholder-pagina. Voeg hier de vertaalde inhoud toe.\n"
+                    target_content = front_matter + placeholder_body
 
-This is the detail page for **{page['name']}**. You can add more detailed content, case studies, or technical specifications here.
-"""
-        # Define the file path
-        file_path = os.path.join(CONTENT_DIR, f"{page['slug']}.md")
+                    with open(target_filepath, 'w', encoding='utf-8') as f:
+                        f.write(target_content)
+                    print(f"  - Created: {target_filepath}")
+                    created_count += 1
 
-        # Write the content to the file
-        with open(file_path, 'w') as f:
-            f.write(md_content)
-        print(f"  - Created '{file_path}'")
-
-def main():
-    """Main function to run the script."""
-    if update_menu_data():
-        create_content_files()
-        print("\n✅ Script finished successfully!")
-        print("Run 'hugo server' to see your new pages.")
+    if created_count == 0:
+        print("✅ Content is already in sync. No new files needed.")
+    else:
+        print(f"\n✅ Finished. Created {created_count} placeholder files.")
 
 if __name__ == '__main__':
-    main()
+    create_placeholders()
