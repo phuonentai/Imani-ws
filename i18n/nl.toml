@@ -92,3 +92,29 @@ other = "We voldoen volledig aan de Algemene Verordening Gegevensbescherming, wa
 other = "Klaar voor NIS2"
 [securityFeature3Desc]
 other = "We stemmen ons proactief af op de vereisten van de NIS2-richtlijn en implementeren robuuste cyberbeveiligingsmaatregelen om kritieke diensten en infrastructuur te beschermen."
+
+
+
+# Talent Section
+[talentTitle]
+other = "Waarom Ons Talent Uw Voordeel Is"
+[talentSubtitle]
+other = "Wij zijn niet zomaar consultants; we zijn een verlengstuk van uw team. Ons talent, een collectief van doorgewinterde financiële analisten en experts in datavisualisatie, is toegewijd aan één doel: uw complexe data omzetten in een strategische troef."
+
+# Alex Doe
+[talentAlexDoeName]
+other = "Alex Doe"
+[talentAlexDoeTitle]
+other = "Lead Financial Strategist"
+[talentAlexDoeBio]
+other = "Met meer dan een decennium aan ervaring in FP&A voor snelgroeiende tech-startups, is Alex een expert in het bouwen van financiële modellen die strategische beslissingen sturen. Hij is gespecialiseerd in cashflowprognoses en scenarioanalyse."
+
+# Jane Smith
+[talentJaneSmithName]
+other = "Jane Smith"
+[talentJaneSmithTitle]
+other = "Hoofd Datavisualisatie"
+[talentJaneSmithBio]
+other = "Jane bevindt zich op het snijvlak van data en design. Ze is een gecertificeerde Power BI-professional die uitblinkt in het creëren van intuïtieve, krachtige dashboards die in één oogopslag helderheid bieden voor complexe bedrijfsvragen."
+
+

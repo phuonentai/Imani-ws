@@ -12,6 +12,7 @@ defaultContentLanguage = "en"
     languageName = "English"
     languageCode = "en-us"
     weight = 1
+    
     [languages.en.params]
       description = "Informani transforms complex financial data into clear, actionable forecasts. We combine expert talent with interactive Power BI dashboards to drive confident business decisions."
   [languages.nl]

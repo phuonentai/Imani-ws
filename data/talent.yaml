@@ -1,0 +1,7 @@
+members:
+  - key: "talentAlexDoe"
+    image: "/images/talent/alex.jpg" # Path relative to /static
+    initials: "AD"
+  - key: "talentJaneSmith"
+    image: "/images/talent/jane.jpg" # Path relative to /static
+    initials: "JS"
