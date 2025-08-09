@@ -28,7 +28,7 @@ title = "Informani | Expert Financial Forecasting & Power BI Dashboards"
     weight = 30
   [[menu.main]]
     name = "Solutions"
-    url = "/solutions/" # This link is already correct
+    url = "/#solutions/" # This link is already correct
     weight = 40
     [menu.main.params]
       has_megamenu = true
