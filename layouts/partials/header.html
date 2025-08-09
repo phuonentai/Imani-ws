@@ -1,0 +1,74 @@
+<header id="header" class="sticky top-0 z-50 bg-white/80 backdrop-blur-lg border-b border-gray-200">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <a href="{{ .Site.BaseURL }}" class="text-2xl font-bold font-serif text-dark">Informani</a>
+        
+        <nav class="hidden md:flex items-center space-x-8">
+            {{/* Loop over the main menu defined in hugo.toml */}}
+            {{ range .Site.Menus.main }}
+                {{/* Check for our custom parameter */}}
+                {{ if .Params.has_megamenu }}
+                    <div 
+                        x-data="{ open: false }" 
+                        @mouseenter="open = true" 
+                        @mouseleave="open = false" 
+                        class="relative"
+                    >
+                        <a href="{{ .URL | relURL }}" 
+                           class="flex items-center text-gray-600 hover:text-accent-color transition duration-300"
+                           :class="{ 'text-accent-color': open }"
+                        >
+                            {{ .Name }}
+                            <svg class="w-4 h-4 ml-1 transition-transform duration-300" :class="{ 'rotate-180': open }" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </a>
+<div 
+    x-show="open"
+    x-transition:enter="transition ease-out duration-300"
+    x-transition:enter-start="opacity-0 transform -translate-y-2"
+    x-transition:enter-end="opacity-100 transform translate-y-0"
+    x-transition:leave="transition ease-in duration-200"
+    x-transition:leave-start="opacity-100 transform translate-y-0"
+    x-transition:leave-end="opacity-0 transform -translate-y-2"
+    class="absolute left-1/2 top-full mt-4 w-screen max-w-4xl transform -translate-x-1/2"
+    style="display: none;"
+>
+                            <div class="bg-white border border-gray-200 rounded-lg shadow-xl overflow-hidden grid grid-cols-1 md:grid-cols-2">
+                                <div class="p-8">
+                                    <h3 class="font-serif text-lg font-semibold text-dark mb-4">Our Core Services</h3>
+                                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                        {{ range site.Data.menu.solutions }}
+                                        <a href="{{ .url }}" class="group">
+                                            <h4 class="font-semibold text-gray-800 group-hover:text-accent-color transition-colors">{{ .name }}</h4>
+                                            <p class="text-sm text-gray-500">{{ .description }}</p>
+                                        </a>
+                                        {{ end }}
+                                    </div>
+                                </div>
+                                <div class="bg-gray-50 p-8 flex flex-col justify-center items-center text-center">
+                                    <img src="https://placehold.co/400x250/00B894/FFFFFF?text=Informani" alt="Financial Dashboard Illustration" class="rounded-lg mb-6 w-full max-w-xs object-cover">
+                                    <h3 class="font-serif text-xl font-bold text-dark mb-2">See Our Solutions in Action</h3>
+                                    <p class="text-gray-600 mb-4">Let us show you how we can transform your financial data into a strategic asset.</p>
+                                    <a href="#contact" class="bg-accent text-white px-5 py-2 rounded-full font-semibold hover:bg-opacity-90 transition duration-300">Schedule a Demo</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {{ else }}
+                    {{/* This is a standard menu link */}}
+                    <a href="{{ .URL | relURL }}" class="text-gray-600 hover:text-accent-color transition duration-300">{{ .Name }}</a>
+                {{ end }}
+            {{ end }}
+             <a href="#contact" class="bg-accent text-white px-5 py-2 rounded-full hover:bg-opacity-90 transition duration-300">Schedule a Demo</a>
+        </nav>
+        
+        <button id="mobile-menu-button" class="md:hidden text-dark">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+        </button>
+    </div>
+    
+    <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+        {{ range .Site.Menus.main }}
+        <a href="{{ .URL | relURL }}" class="block py-2 text-gray-600 hover:text-accent-color">{{ .Name }}</a>
+        {{ end }}
+        <a href="#contact" class="block mt-4 bg-accent text-white text-center px-5 py-2 rounded-full hover:bg-opacity-90">Schedule a Demo</a>
+    </div>
+</header>

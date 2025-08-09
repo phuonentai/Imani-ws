@@ -1,0 +1,33 @@
+{
+  "revenue": {
+    "labels": ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+    "datasets": [{
+      "label": "Revenue (€k)",
+      "data": [120, 150, 180, 160, 210, 240],
+      "backgroundColor": "rgba(0, 184, 148, 0.2)",
+      "borderColor": "rgba(0, 184, 148, 1)",
+      "borderWidth": 2,
+      "type": "bar"
+    }, {
+      "label": "Forecast (€k)",
+      "data": [110, 145, 185, 170, 200, 250],
+      "type": "line",
+      "borderColor": "#121212",
+      "borderDash": [5, 5],
+      "fill": false
+    }]
+  },
+  "cashflow": {
+    "labels": ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+    "datasets": [
+      {
+        "label": "Inflow (€k)",
+        "data": [200, 220, 250, 230, 280, 300]
+      },
+      {
+        "label": "Outflow (€k)",
+        "data": [180, 190, 200, 210, 240, 250]
+      }
+    ]
+  }
+}

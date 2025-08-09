@@ -1,0 +1,47 @@
+
+# Navigation Links
+[scheduleDemo]
+other = "Plan een Demo"
+[navTheMethod]
+other = "De Methode"
+[navOnboarding]
+other = "Onboarding"
+[navSecurity]
+other = "Beveiliging"
+[navSolutions]
+other = "Oplossingen"
+[navWhyUs]
+other = "Waarom Wij"
+[allRightsReserved]
+other = "Alle rechten voorbehouden"
+
+[heroTitle]
+other = "Financiële Prognoses, <br class=\"hidden md:block\" />Geëvolueerd."
+[heroSubtitle]
+other = "Wij transformeren uw data in kristalheldere, interactieve prognoses die zelfverzekerde besluitvorming mogelijk maken."
+[heroCTA]
+other = "Ontdek de Methode"
+[chartTab1]
+other = "Maandelijkse Omzet"
+[chartTab2]
+other = "Cashflow"
+[chartTab3]
+other = "Klantengroei"
+[socialProofTitle]
+other = "Vertrouwd door toonaangevende financiële teams"
+[methodTitle]
+other = "Van Chaos naar Helderheid in 3 Stappen"
+[methodSubtitle]
+other = "Ons proces is ontworpen voor maximale impact met minimale frictie. Onze financiële prognosediensten nemen het zware werk uit handen, zodat u zich kunt concentreren op de inzichten."
+[viewMinicase]
+other = "Bekijk mini-case"
+[contactTitle]
+other = "Klaar voor Helderheid?"
+[formFullName]
+other = "Volledige Naam"
+[formBusinessEmail]
+other = "Zakelijke E-mail"
+[formSubmit]
+other = "Vraag mijn Demo aan"
+[formSuccessMsg]
+other = "Bedankt voor uw aanvraag! We nemen binnen 24 uur contact met u op."

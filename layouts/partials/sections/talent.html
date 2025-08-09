@@ -1,0 +1,28 @@
+
+{{ with .Site.GetPage "/sections/talent" }}
+<section id="talent" class="py-24 md:py-32">
+    <div class="container mx-auto px-6">
+        <div class="grid md:grid-cols-2 gap-16 items-center">
+            <div>
+                <h2 class="text-3xl md:text-4xl font-bold font-serif mb-4">{{ .Title }}</h2>
+                <p class="text-lg text-gray-600">{{ .Content }}</p>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+                {{ range .Resources.ByType "page" }}
+                <div class="talent-card cursor-pointer group {{ if (modBool .Weight 2) }}mt-8{{ end }}" 
+                    data-name="{{ .Params.name }}" 
+                    data-title="{{ .Params.title }}" 
+                    data-bio="{{ .Params.bio }}">
+                    {{ with .Resources.GetMatch .Params.image }}
+                        {{ $img := .Fill "400x400" }}
+                        <img src="{{ $img.RelPermalink }}" alt="Portrait of {{ .Params.name }}" class="rounded-lg w-full h-auto grayscale group-hover:grayscale-0 transition duration-300">
+                    {{ else }}
+                        <img src="https://placehold.co/400x400/121212/FFFFFF?text={{ .Params.initials }}" alt="Portrait of {{ .Params.name }}" class="rounded-lg w-full h-auto grayscale group-hover:grayscale-0 transition duration-300">
+                    {{ end }}
+                </div>
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</section>
+{{ end }}

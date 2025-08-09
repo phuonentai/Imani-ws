@@ -1,0 +1,13 @@
+
+title: "Industry-Leading Security & Compliance"
+subtitle: "Your financial data is your most critical asset. We protect it with the highest standards of security and a commitment to regulatory compliance."
+features:
+  - title: "ISO 27001 Certified"
+    description: "Our Information Security Management System (ISMS) is certified against the ISO 27001 standard, ensuring systematic risk management and data protection."
+    icon: '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="m9 12 2 2 4-4"></path></svg>'
+  - title: "GDPR Compliant"
+    description: "We are fully compliant with the General Data Protection Regulation, guaranteeing the privacy and protection of all personal data for our EU-based clients."
+    icon: '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent"><path d="M15 12s-3-4-3-4-3 4-3 4 3 4 3 4 3-4 3-4z"></path><path d="M2.7 10.3a11 11 0 0 0 18.6 0"></path><path d="M2.7 13.7a11 11 0 0 1 18.6 0"></path></svg>'
+  - title: "NIS2 Ready"
+    description: "We proactively align with the NIS2 Directive's requirements, implementing robust cybersecurity measures to protect critical services and infrastructure."
+    icon: '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>'

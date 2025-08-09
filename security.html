@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Solutions | Informani Financial Forecasting</title>
+    
+    <meta name="description" content="Explore Informani's expert financial solutions, including cash flow forecasting, scenario planning, and budget & variance analysis to drive your business forward.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter (Body) & Lora (Headings) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Chart.js for interactive charts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+
+
+    <style>
+        /* Custom styles for typography and accent colors */
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #121212;
+            background-color: #FFFFFF;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Lora', serif;
+        }
+        .bg-primary { background-color: #FFFFFF; }
+        .bg-secondary { background-color: #F7F7F7; }
+        .text-dark { color: #121212; }
+        .accent-color { color: #00B894; }
+        .bg-accent { background-color: #00B894; }
+        .border-accent { border-color: #00B894; }
+        .ring-accent { --tw-ring-color: #00B894; }
+    </style>
+</head>
+<body class="bg-primary text-dark">
+
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-lg border-b border-gray-200">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold font-serif text-dark">Informani</a>
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="index.html#methode" class="text-gray-600 hover:text-accent transition duration-300">The Method</a>
+                <a href="index.html#onboarding" class="text-gray-600 hover:text-accent transition duration-300">Onboarding</a>
+                <a href="security.html" class="text-gray-600 hover:text-accent transition duration-300">Security</a>
+                <a href="#" class="text-accent font-semibold">Solutions</a>
+                <a href="index.html#talent" class="text-gray-600 hover:text-accent transition duration-300">Why Us</a>
+                <a href="index.html#contact" class="bg-accent text-white px-5 py-2 rounded-full hover:bg-opacity-90 transition duration-300">Schedule a Demo</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden text-dark">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+         <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="index.html#methode" class="block py-2 text-gray-600 hover:text-accent">The Method</a>
+            <a href="index.html#onboarding" class="block py-2 text-gray-600 hover:text-accent">Onboarding</a>
+            <a href="security.html" class="block py-2 text-gray-600 hover:text-accent">Security</a>
+            <a href="#" class="block py-2 text-accent font-semibold">Solutions</a>
+            <a href="index.html#talent" class="block py-2 text-gray-600 hover:text-accent">Why Us</a>
+            <a href="index.html#contact" class="block mt-4 bg-accent text-white text-center px-5 py-2 rounded-full hover:bg-opacity-90">Schedule a Demo</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Header -->
+        <section class="bg-secondary py-20 md:py-28">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-4xl md:text-6xl font-bold font-serif leading-tight mb-4">Our Financial Solutions</h1>
+                <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">Tailored services designed to address your most complex financial challenges and unlock strategic growth. Informani provides powerful insights without the need for expensive, in-house financial data analysts.</p>
+            </div>
+        </section>
+
+        <!-- Solution 1: Cash Flow Forecasting -->
+        <section id="cashflow" class="py-24 md:py-32">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+                    <div class="order-2 md:order-1">
+                        <h2 class="text-3xl md:text-4xl font-bold font-serif mb-4">Cash Flow Forecasting</h2>
+                        <p class="text-lg text-gray-600 mb-6">Move beyond reactive cash management. Our cash flow forecasting services provide a dynamic, forward-looking view of your liquidity, enabling you to anticipate needs, optimize working capital, and make strategic investment decisions with confidence.</p>
+                        <ul class="space-y-4 mb-8">
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-accent mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span><strong>Predictive Inflow & Outflow Analysis:</strong> Identify future cash surpluses and shortfalls before they occur.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-accent mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span><strong>Working Capital Optimization:</strong> Pinpoint opportunities to improve your cash conversion cycle.</span>
+                            </li>
+                             <li class="flex items-start">
+                                <svg class="w-6 h-6 text-accent mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span><strong>Debt & Covenant Monitoring:</strong> Proactively manage loan covenants and liquidity ratios.</span>
+                            </li>
+                        </ul>
+                        <a href="#contact" class="bg-accent text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-opacity-90 transition duration-300 inline-block">Discuss Cash Flow</a>
+                    </div>
+                    <div class="order-1 md:order-2">
+                        <div class="bg-secondary p-4 sm:p-8 rounded-xl shadow-lg">
+                            <canvas id="cashflowSolutionChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Solution 2: Scenario Planning -->
+        <section id="scenario" class="py-24 md:py-32 bg-secondary">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+                    <div>
+                        <div class="bg-white p-4 sm:p-8 rounded-xl shadow-lg">
+                           <canvas id="scenarioSolutionChart"></canvas>
+                        </div>
+                    </div>
+                    <div>
+                        <h2 class="text-3xl md:text-4xl font-bold font-serif mb-4">Scenario Planning & Analysis</h2>
+                        <p class="text-lg text-gray-600 mb-6">In today's volatile market, what-if is no longer a question but a necessity. Our scenario planning services allow you to model the potential impact of various internal and external factors on your financial performance, turning uncertainty into a strategic advantage.</p>
+                        <ul class="space-y-4 mb-8">
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-accent mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span><strong>Best/Worst-Case Modeling:</strong> Understand the full spectrum of potential outcomes for your strategic initiatives.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-accent mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span><strong>Market Fluctuation Simulation:</strong> Test your business resilience against changes in interest rates, commodity prices, or demand.</span>
+                            </li>
+                             <li class="flex items-start">
+                                <svg class="w-6 h-6 text-accent mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span><strong>M&A and Investment Analysis:</strong> Quantify the financial impact of major strategic decisions before you commit.</span>
+                            </li>
+                        </ul>
+                        <a href="#contact" class="bg-accent text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-opacity-90 transition duration-300 inline-block">Plan Scenarios</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Solution 3: Budget & Variance Analysis -->
+        <section id="budget" class="py-24 md:py-32">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+                    <div class="order-2 md:order-1">
+                        <h2 class="text-3xl md:text-4xl font-bold font-serif mb-4">Budget & Variance Analysis</h2>
+                        <p class="text-lg text-gray-600 mb-6">Transform your annual, static budget into a living, breathing management tool. We help you move beyond simple budget-vs-actual reporting to understand the "why" behind your financial performance, enabling faster course corrections and more accurate future planning.</p>
+                        <ul class="space-y-4 mb-8">
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-accent mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span><strong>Real-time Performance Dashboards:</strong> Instantly compare actual results against budgets and forecasts.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-accent mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span><strong>Root Cause Drill-Down:</strong> Quickly identify the key drivers of financial variance, from price to volume to mix.</span>
+                            </li>
+                             <li class="flex items-start">
+                                <svg class="w-6 h-6 text-accent mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span><strong>Rolling Forecast Integration:</strong> Evolve your planning process with continuous, updated forecasts based on the latest data.</span>
+                            </li>
+                        </ul>
+                        <a href="#contact" class="bg-accent text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-opacity-90 transition duration-300 inline-block">Improve Budgeting</a>
+                    </div>
+                    <div class="order-1 md:order-2">
+                        <div class="bg-secondary p-4 sm:p-8 rounded-xl shadow-lg">
+                           <canvas id="budgetSolutionChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white">
+        <div class="container mx-auto px-6 py-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <p class="text-center md:text-left text-gray-400 text-sm mb-4 md:mb-0">&copy; 2024 Informani Financials. All rights reserved.</p>
+                <div class="flex items-center space-x-6">
+                    <!-- X (Twitter) Icon -->
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                        <span class="sr-only">X</span>
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
+                        </svg>
+                    </a>
+                    <!-- LinkedIn Icon -->
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                        <span class="sr-only">LinkedIn</span>
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path>
+                        </svg>
+                    </a>
+                    <!-- Facebook Icon -->
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                        <span class="sr-only">Facebook</span>
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // --- Mobile menu toggle ---
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenuButton) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+
+        // --- Chart.js Options ---
+        const chartOptions = {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    position: 'top',
+                    labels: {
+                        font: { family: "'Inter', sans-serif" }
+                    }
+                },
+                tooltip: {
+                    backgroundColor: '#121212',
+                    titleFont: { family: "'Lora', serif", size: 16 },
+                    bodyFont: { family: "'Inter', sans-serif", size: 12 },
+                }
+            },
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    ticks: {
+                        font: { family: "'Inter', sans-serif" },
+                        callback: function(value) { return '€' + value + 'k'; }
+                    }
+                },
+                x: {
+                    ticks: {
+                        font: { family: "'Inter', sans-serif" }
+                    }
+                }
+            }
+        };
+
+        // --- Solution Chart 1: Cash Flow Forecasting ---
+        const cashflowCtx = document.getElementById('cashflowSolutionChart');
+        if (cashflowCtx) {
+            new Chart(cashflowCtx, {
+                type: 'line',
+                data: {
+                    labels: ['Jan', 'Feb', 'Mrt', 'Apr', 'Mei', 'Jun'],
+                    datasets: [{
+                        label: 'Verwachte Instroom',
+                        data: [250, 260, 280, 270, 300, 320],
+                        borderColor: 'rgba(0, 184, 148, 1)',
+                        backgroundColor: 'rgba(0, 184, 148, 0.1)',
+                        fill: true,
+                        tension: 0.4
+                    }, {
+                        label: 'Verwachte Uitstroom',
+                        data: [220, 230, 240, 250, 260, 270],
+                        borderColor: 'rgba(255, 118, 117, 1)',
+                        backgroundColor: 'rgba(255, 118, 117, 0.1)',
+                        fill: true,
+                        tension: 0.4
+                    }]
+                },
+                options: chartOptions
+            });
+        }
+
+        // --- Solution Chart 2: Scenario Planning ---
+        const scenarioCtx = document.getElementById('scenarioSolutionChart');
+        if (scenarioCtx) {
+            new Chart(scenarioCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['Q3 Forecast', 'Q4 Forecast'],
+                    datasets: [{
+                        label: 'Pessimistisch Scenario',
+                        data: [450, 480],
+                        backgroundColor: 'rgba(255, 118, 117, 0.7)',
+                        borderColor: 'rgba(255, 118, 117, 1)',
+                        borderWidth: 1
+                    }, {
+                        label: 'Basis Scenario',
+                        data: [520, 550],
+                        backgroundColor: 'rgba(116, 185, 255, 0.7)',
+                        borderColor: 'rgba(116, 185, 255, 1)',
+                        borderWidth: 1
+                    }, {
+                        label: 'Optimistisch Scenario',
+                        data: [600, 640],
+                        backgroundColor: 'rgba(0, 184, 148, 0.7)',
+                        borderColor: 'rgba(0, 184, 148, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    ...chartOptions,
+                    scales: {
+                        ...chartOptions.scales,
+                        x: { ...chartOptions.scales.x, stacked: false },
+                        y: { ...chartOptions.scales.y, stacked: false }
+                    }
+                }
+            });
+        }
+
+        // --- Solution Chart 3: Budget & Variance Analysis ---
+        const budgetCtx = document.getElementById('budgetSolutionChart');
+        if (budgetCtx) {
+            const budgetData = [
+                { category: 'Marketing', budget: 50, actual: 45, driver: 'Lagere advertentiekosten' },
+                { category: 'Sales', budget: 75, actual: 78, driver: 'Hogere commissies door overperformance' },
+                { category: 'R&D', budget: 60, actual: 65, driver: 'Onverwachte softwarelicentie' },
+                { category: 'G&A', budget: 40, actual: 38, driver: 'Besparing op kantoorkosten' }
+            ];
+
+            new Chart(budgetCtx, {
+                type: 'bar',
+                data: {
+                    labels: budgetData.map(d => d.category),
+                    datasets: [{
+                        label: 'Budget',
+                        data: budgetData.map(d => d.budget),
+                        backgroundColor: 'rgba(116, 185, 255, 0.5)',
+                    }, {
+                        label: 'Actueel',
+                        data: budgetData.map(d => d.actual),
+                        backgroundColor: 'rgba(0, 184, 148, 0.7)',
+                    }]
+                },
+                options: {
+                    ...chartOptions,
+                    plugins: {
+                        ...chartOptions.plugins,
+                        tooltip: {
+                            ...chartOptions.plugins.tooltip,
+                            callbacks: {
+                                label: function(context) {
+                                    const index = context.dataIndex;
+                                    const datasetLabel = context.dataset.label || '';
+                                    const value = context.parsed.y;
+                                    return `${datasetLabel}: €${value}k`;
+                                },
+                                afterBody: function(context) {
+                                    // Show driver only for the 'Actual' dataset
+                                    if (context[0].datasetIndex === 1) {
+                                        const index = context[0].dataIndex;
+                                        const driver = budgetData[index].driver;
+                                        const budget = budgetData[index].budget;
+                                        const actual = budgetData[index].actual;
+                                        const variance = actual - budget;
+                                        const variancePercent = ((variance / budget) * 100).toFixed(1);
+                                        return `\nVariantie: €${variance}k (${variancePercent}%)\nDriver: ${driver}`;
+                                    }
+                                    return '';
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+    });
+    </script>
+</body>
+</html>

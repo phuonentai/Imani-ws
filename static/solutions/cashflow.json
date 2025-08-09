@@ -1,0 +1,42 @@
+{
+    "labels": [
+        "Jan",
+        "Feb",
+        "Mrt",
+        "Apr",
+        "Mei",
+        "Jun"
+    ],
+    "datasets": [
+        {
+            "label": "Verwachte Instroom",
+            "data": [
+                250,
+                260,
+                280,
+                270,
+                300,
+                320
+            ],
+            "borderColor": "rgba(0, 184, 148, 1)",
+            "backgroundColor": "rgba(0, 184, 148, 0.1)",
+            "fill": true,
+            "tension": 0.4
+        },
+        {
+            "label": "Verwachte Uitstroom",
+            "data": [
+                220,
+                230,
+                240,
+                250,
+                260,
+                270
+            ],
+            "borderColor": "rgba(255, 118, 117, 1)",
+            "backgroundColor": "rgba(255, 118, 117, 0.1)",
+            "fill": true,
+            "tension": 0.4
+        }
+    ]
+}

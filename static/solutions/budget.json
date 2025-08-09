@@ -1,0 +1,8 @@
+{
+    "rawData": [
+        { "category": "Marketing", "budget": 50, "actual": 45, "driver": "Lagere advertentiekosten" },
+        { "category": "Sales", "budget": 75, "actual": 78, "driver": "Hogere commissies door overperformance" },
+        { "category": "R&D", "budget": 60, "actual": 65, "driver": "Onverwachte softwarelicentie" },
+        { "category": "G&A", "budget": 40, "actual": 38, "driver": "Besparing op kantoorkosten" }
+    ]
+}

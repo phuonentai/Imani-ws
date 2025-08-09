@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode | default "en" }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    {{ partial "seo.html" . }}
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    {{ $styles := resources.Get "css/main.css" | postCSS }}
+    <link rel="stylesheet" href="{{ $styles.RelPermalink }}">
+
+    <style>
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+<body class="bg-primary text-dark">
+    <div id="page-wrapper">
+        {{ partial "header.html" . }}
+        <main>
+            {{ block "main" . }}{{ end }}
+        </main>
+        {{ partial "footer.html" . }}
+    </div>
+
+    {{ partial "modal-talent.html" . }}
+
+    {{ $mainJS := resources.Get "js/main.js" }}
+    {{ $js := $mainJS | js.Build (dict "params" (dict "charts" site.Data.charts)) }}
+    <script src="{{ $js.RelPermalink }}"></script>
+</body>
+</html>

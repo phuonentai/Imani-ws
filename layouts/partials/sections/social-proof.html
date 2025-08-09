@@ -1,0 +1,13 @@
+
+{{ with .Site.Data.clients }}
+<section class="py-16 bg-secondary">
+    <div class="container mx-auto px-6">
+        <p class="text-center text-gray-500 font-semibold mb-6">{{ i18n "socialProofTitle" }}</p>
+        <div class="flex flex-wrap justify-center items-center gap-x-8 md:gap-x-16 gap-y-4">
+            {{ range .list }}
+            <span class="font-bold text-gray-400 text-lg">{{ . }}</span>
+            {{ end }}
+        </div>
+    </div>
+</section>
+{{ end }}

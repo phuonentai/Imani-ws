@@ -1,0 +1,17 @@
+{
+    "labels": ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+    "datasets": [{
+        "label": "Revenue (€k)",
+        "data": [120, 150, 180, 160, 210, 240],
+        "backgroundColor": "rgba(0, 184, 148, 0.2)",
+        "borderColor": "rgba(0, 184, 148, 1)",
+        "borderWidth": 2
+    }, {
+        "label": "Forecast (€k)",
+        "data": [110, 145, 185, 170, 200, 250],
+        "type": "line",
+        "borderColor": "#121212",
+        "borderDash": [5, 5],
+        "fill": false
+    }]
+}

@@ -1,0 +1,16 @@
+{
+    "labels": ["Q3 Forecast", "Q4 Forecast"],
+    "datasets": [{
+        "label": "Pessimistisch Scenario",
+        "data": [450, 480],
+        "backgroundColor": "rgba(255, 118, 117, 0.7)"
+    }, {
+        "label": "Basis Scenario",
+        "data": [520, 550],
+        "backgroundColor": "rgba(116, 185, 255, 0.7)"
+    }, {
+        "label": "Optimistisch Scenario",
+        "data": [600, 640],
+        "backgroundColor": "rgba(0, 184, 148, 0.7)"
+    }]
+}

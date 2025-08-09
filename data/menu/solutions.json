@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Cash Flow Forecasting",
+    "description": "Anticipate your future liquidity with precision.",
+    "url": "/solutions/#cashflow"
+  },
+  {
+    "name": "Scenario Planning",
+    "description": "Model various market conditions to stay ahead.",
+    "url": "/solutions/#scenario"
+  },
+  {
+    "name": "Budget & Variance Analysis",
+    "description": "Turn static budgets into dynamic financial models.",
+    "url": "/solutions/#budget"
+  },
+  {
+    "name": "FP&A Outsourcing",
+    "description": "Leverage our expert team for your financial planning.",
+    "url": "/solutions/fpa-outsourcing/"
+  },
+  {
+    "name": "Power BI Dashboards",
+    "description": "Get interactive, real-time business insights.",
+    "url": "/solutions/power-bi-dashboards/"
+  },
+  {
+    "name": "Data Integration",
+    "description": "Consolidate data sources for a single source of truth.",
+    "url": "/solutions/data-integration/"
+  }
+]

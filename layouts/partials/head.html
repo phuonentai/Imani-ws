@@ -1,0 +1,21 @@
+<meta charset="UTF-8">
+<title>{{ .Title }}</title>
+<meta name="description" content="{{ .Site.Language.Params.description }}">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+// layouts/partials/head.html
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link href="https://fonts.googleapis.com/css2?..." rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+// layouts/index.html
+{{ define "scripts" }}
+    <script>
+        // This line creates a global JavaScript variable named 'chartData'
+        window.chartData = {{ .Site.Data.charts.en | jsonify }};
+    </script>
+    <script src="{{ (resources.Get "js/charts.js").RelPermalink }}"></script>
+{{ end }}

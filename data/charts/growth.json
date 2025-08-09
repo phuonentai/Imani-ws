@@ -1,0 +1,16 @@
+{
+  "labels": ["New Customers", "Existing Customers (Upsell)", "Churn"],
+  "datasets": [
+    {
+      "label": "Customer Distribution",
+      "data": [45, 35, 8],
+      "backgroundColor": [
+        "rgba(0, 184, 148, 0.7)",
+        "rgba(0, 184, 148, 0.4)",
+        "rgba(255, 118, 117, 0.7)"
+      ],
+      "borderColor": "#FFFFFF",
+      "borderWidth": 3
+    }
+  ]
+}

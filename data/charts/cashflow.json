@@ -1,0 +1,21 @@
+{
+  "labels": ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+  "datasets": [
+    {
+      "label": "Inflow (€k)",
+      "data": [200, 220, 250, 230, 280, 300],
+      "borderColor": "rgba(0, 184, 148, 1)",
+      "backgroundColor": "rgba(0, 184, 148, 0.1)",
+      "fill": true,
+      "tension": 0.4
+    },
+    {
+      "label": "Outflow (€k)",
+      "data": [180, 190, 200, 210, 240, 250],
+      "borderColor": "rgba(255, 118, 117, 1)",
+      "backgroundColor": "rgba(255, 118, 117, 0.1)",
+      "fill": true,
+      "tension": 0.4
+    }
+  ]
+}

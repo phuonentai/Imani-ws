@@ -1,0 +1,34 @@
+<title>{{ .Site.Title }}</title>
+<meta name="description" content="{{ .Site.Params.description }}">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FinancialService",
+  "name": "Informani",
+  "url": "{{ .Site.BaseURL }}",
+  "logo": "{{ (.Site.BaseURL | absURL) }}{{ .Site.Params.logo }}",
+  "description": "{{ .Site.Params.description }}",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "{{ .Site.Params.address.street }}",
+    "addressLocality": "{{ .Site.Params.address.locality }}",
+    "postalCode": "{{ .Site.Params.address.postalCode }}",
+    "addressCountry": "{{ .Site.Params.address.country }}"
+  },
+  "provider": {
+    "@type": "Organization",
+    "name": "{{ .Site.Params.author }}"
+  },
+  "serviceType": [
+    "Financial Forecasting",
+    "Cash Flow Analysis",
+    "Scenario Planning",
+    "Power BI Dashboarding"
+  ],
+  "areaServed": {
+    "@type": "Country",
+    "name": "Netherlands"
+  }
+}
+</script>

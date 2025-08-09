@@ -1,0 +1,47 @@
+
+# Navigation Links
+[scheduleDemo]
+other = "Schedule a Demo"
+[navTheMethod]
+other = "The Method"
+[navOnboarding]
+other = "Onboarding"
+[navSecurity]
+other = "Security"
+[navSolutions]
+other = "Solutions"
+[navWhyUs]
+other = "Why Us"
+[allRightsReserved]
+other = "All rights reserved"
+
+[heroTitle]
+other = "Financial Forecasting, <br class=\"hidden md:block\" />Evolved."
+[heroSubtitle]
+other = "We transform your data into crystal-clear, interactive forecasts that enable confident decision-making."
+[heroCTA]
+other = "Discover the Method"
+[chartTab1]
+other = "Monthly Revenue"
+[chartTab2]
+other = "Cash Flow"
+[chartTab3]
+other = "Customer Growth"
+[socialProofTitle]
+other = "Trusted by leading financial teams"
+[methodTitle]
+other = "From Chaos to Clarity in 3 Steps"
+[methodSubtitle]
+other = "Our process is designed for maximum impact with minimum friction. Our financial forecasting services do the heavy lifting, so you can focus on the insights."
+[viewMinicase]
+other = "View mini-case"
+[contactTitle]
+other = "Ready for Clarity?"
+[formFullName]
+other = "Full Name"
+[formBusinessEmail]
+other = "Business Email"
+[formSubmit]
+other = "Request My Demo"
+[formSuccessMsg]
+other = "Thank you for your request! We will be in touch within 24 hours."
