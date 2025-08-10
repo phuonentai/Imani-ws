@@ -1,9 +1,7 @@
 <header id="header" class="sticky top-0 z-50 bg-white/80 backdrop-blur-lg border-b border-gray-200">
     <div class="container mx-auto px-6 py-4 flex justify-between items-center">
         
-        <a href="{{ .Site.Home.Permalink }}" class="block">
-            <img src="{{ .Site.Params.logo | relURL }}" alt="{{ .Site.Title }} Logo" class="h-8 w-auto">
-        </a>
+        <a href="{{ "/" | relLangURL }}" class="text-2xl font-bold font-serif text-dark">Informani</a>
         
         <div class="flex items-center">
             <nav class="hidden md:flex items-center space-x-8">
@@ -35,20 +33,20 @@
                             >
                                 <div class="bg-white border border-gray-200 rounded-lg shadow-xl overflow-hidden grid grid-cols-1 md:grid-cols-2">
                                     <div class="p-8">
-                                        <h3 class="font-serif text-lg font-semibold text-dark mb-4">{{ i18n "ourCoreServices" }}</h3>
+                                        <h3 class="font-serif text-lg font-semibold text-dark mb-4">{{ i18n "megamenuCoreServices" }}</h3>
                                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                                             {{ range site.Data.menu.solutions }}
                                             <a href="{{ .url | relLangURL }}" class="group">
-                                                <h4 class="font-semibold text-gray-800 group-hover:text-accent-color transition-colors">{{ .name }}</h4>
-                                                <p class="text-sm text-gray-500">{{ .description }}</p>
+                                                <h4 class="font-semibold text-gray-800 group-hover:text-accent-color transition-colors">{{ i18n .name }}</h4>
+                                                <p class="text-sm text-gray-500">{{ i18n .description }}</p>
                                             </a>
                                             {{ end }}
                                         </div>
                                     </div>
                                     <div class="bg-gray-50 p-8 flex flex-col justify-center items-center text-center">
                                         <img src="https://placehold.co/400x250/00B894/FFFFFF?text=Informani" alt="Financial Dashboard Illustration" class="rounded-lg mb-6 w-full max-w-xs object-cover">
-                                        <h3 class="font-serif text-xl font-bold text-dark mb-2">{{ i18n "seeSolutionsAction" }}</h3>
-                                        <p class="text-gray-600 mb-4">{{ i18n "letUsShowYou" }}</p>
+                                        <h3 class="font-serif text-xl font-bold text-dark mb-2">{{ i18n "megamenuSeeInAction" }}</h3>
+                                        <p class="text-gray-600 mb-4">{{ i18n "megamenuCTAExplanation" }}</p>
                                         <a href="{{ "/#contact" | relLangURL }}" class="bg-accent text-white px-5 py-2 rounded-full font-semibold hover:bg-opacity-90 transition duration-300">{{ i18n "scheduleDemo" }}</a>
                                     </div>
                                 </div>
@@ -62,7 +60,7 @@
             </nav>
 
             <div class="hidden md:block ml-6">
-                {{ partial "language-switcher.html" . }}
+                 {{ partial "language-switcher.html" . }}
             </div>
         </div>
         

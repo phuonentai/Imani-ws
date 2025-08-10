@@ -1,29 +1,16 @@
+{{ if .IsTranslated }}
 <div x-data="{ open: false }" class="relative">
-  {{/* This button is now always visible */}}
-  <button 
-    @click="open = !open" 
-    class="flex items-center text-gray-600 hover:text-dark transition-colors duration-300"
-    {{ if not .IsTranslated }} disabled {{ end }} {{/* Disable button if no translation exists */}}
-  >
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM4.332 8.027a6.012 6.012 0 011.912-2.706C6.512 5.73 6.512 5.73 6.512 5.73s0 0 .001.001a8.42 8.42 0 012.333-.425 6.01 6.01 0 012.166.425c.39.097.713.415.79.825.078.41a.36.36 0 00-.053.29c-.06.196-.208.368-.42.465a7.48 7.48 0 01-1.27.418 7.48 7.48 0 01-1.27-.418 1.57 1.57 0 00-.42-.465.36.36 0 00-.053-.29c.078-.41.399-.728.79-.825a8.42 8.42 0 012.333.425 6.01 6.01 0 012.166-.425c.39.097.713.415.79.825.078.41a.36.36 0 00-.053.29c-.06.196-.208.368-.42.465a7.48 7.48 0 01-1.27.418 7.48 7.48 0 01-1.27-.418 1.57 1.57 0 00-.42-.465.36.36 0 00-.053-.29c.078-.41.399-.728.79-.825z" clip-rule="evenodd" /></svg>
-    <span class="ml-2 font-semibold uppercase">{{ .Site.Language.Lang }}</span>
-    {{ if .IsTranslated }} {{/* Arrow only shows if there are options */}}
-      <svg class="w-4 h-4 ml-1 fill-current" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>
-    {{ end }}
-  </button>
-
-  {{/* The dropdown only renders if there are translations to link to */}}
-  {{ if .IsTranslated }}
-  <div 
-    x-show="open" 
-    @click.away="open = false" 
-    class="absolute right-0 mt-2 w-32 bg-white rounded-md shadow-xl z-20" 
-    style="display:none;"
-    x-transition
-  >
-    {{ range .Translations }}
-      <a href="{{ .Permalink }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-secondary transition-colors duration-200">{{ .Language.LanguageName }}</a>
-    {{ end }}
-  </div>
-  {{ end }}
+    {{/* Button to show the current language and open the dropdown */}}
+    <button @click="open = !open" class="flex items-center text-gray-600 hover:text-accent-color transition duration-300">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+        <span>{{ .Site.Language.LanguageName }}</span>
+        <svg class="w-4 h-4 ml-1 transition-transform duration-300" :class="{ 'rotate-180': open }" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+    </button>
+    {{/* Dropdown menu with links to other language versions of the page */}}
+    <div x-show="open" @click.away="open = false" class="absolute right-0 mt-2 py-2 w-40 bg-white rounded-md shadow-xl z-20" style="display: none;">
+        {{ range .AllTranslations }}
+            <a href="{{ .RelPermalink }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">{{ .Language.LanguageName }}</a>
+        {{ end }}
+    </div>
 </div>
+{{ end }}

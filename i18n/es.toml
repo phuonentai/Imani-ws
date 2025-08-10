@@ -118,3 +118,30 @@ other = "Jane Smith"
 other = "Jefa de Visualización de Datos"
 [talentJaneSmithBio]
 other = "Jane vive en la intersección de los datos y el diseño. Es una profesional certificada en Power BI que sobresale en la creación de paneles intuitivos y potentes que brindan claridad de un vistazo para preguntas comerciales complejas."
+
+
+# Mega Menu Solutions
+[megamenuCashFlowName]
+other = "Previsión de Flujo de Caja"
+[megamenuCashFlowDesc]
+other = "Anticipe su liquidez futura con precisión."
+[megamenuScenarioPlanningName]
+other = "Planificación de Escenarios"
+[megamenuScenarioPlanningDesc]
+other = "Modele diversas condiciones de mercado para mantenerse a la vanguardia."
+[megamenuBudgetAnalysisName]
+other = "Análisis de Presupuesto y Varianza"
+[megamenuBudgetAnalysisDesc]
+other = "Convierta los presupuestos estáticos en modelos financieros dinámicos."
+[megamenuFpaOutsourcingName]
+other = "Externalización de FP&A"
+[megamenuFpaOutsourcingDesc]
+other = "Aproveche nuestro equipo de expertos para su planificación financiera."
+[megamenuPowerBiName]
+other = "Paneles de Power BI"
+[megamenuPowerBiDesc]
+other = "Obtenga información empresarial interactiva y en tiempo real."
+[megamenuDataIntegrationName]
+other = "Integración de Datos"
+[megamenuDataIntegrationDesc]
+other = "Consolide las fuentes de datos para una única fuente de verdad."

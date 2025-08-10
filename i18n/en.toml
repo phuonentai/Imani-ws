@@ -121,3 +121,30 @@ other = "Jane lives at the intersection of data and design. She is a certified P
 [securityFeature3Desc]
 other = "We proactively align with the NIS2 Directive's requirements, implementing robust cybersecurity measures to protect critical services and infrastructure."
 
+# ... (existing translations)
+
+# Mega Menu Solutions
+[megamenuCashFlowName]
+other = "Cash Flow Forecasting"
+[megamenuCashFlowDesc]
+other = "Anticipate your future liquidity with precision."
+[megamenuScenarioPlanningName]
+other = "Scenario Planning"
+[megamenuScenarioPlanningDesc]
+other = "Model various market conditions to stay ahead."
+[megamenuBudgetAnalysisName]
+other = "Budget & Variance Analysis"
+[megamenuBudgetAnalysisDesc]
+other = "Turn static budgets into dynamic financial models."
+[megamenuFpaOutsourcingName]
+other = "FP&A Outsourcing"
+[megamenuFpaOutsourcingDesc]
+other = "Leverage our expert team for your financial planning."
+[megamenuPowerBiName]
+other = "Power BI Dashboards"
+[megamenuPowerBiDesc]
+other = "Get interactive, real-time business insights."
+[megamenuDataIntegrationName]
+other = "Data Integration"
+[megamenuDataIntegrationDesc]
+other = "Consolidate data sources for a single source of truth."

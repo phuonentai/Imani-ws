@@ -1,21 +1,12 @@
 {{ define "main" }}
-    {{ partial "sections/hero.html" . }}
-    {{ partial "sections/social-proof.html" . }}
-    {{ partial "sections/method.html" . }}
-    {{ partial "sections/onboarding.html" . }}
-    {{ partial "sections/security.html" . }}
-    {{ partial "sections/solutions.html" . }}
-    {{ partial "sections/talent.html" . }}
-    {{ partial "sections/contact.html" . }}
+    {{ partial "main-body.html" . }}
 {{ end }}
 
 {{ define "scripts" }}
-<script>
-        // Pass chart data from /data/ to the browser, depending on the current language
-        {{ $lang := .Site.Language.Lang }}
-        {{ $chartData := index .Site.Data.charts $lang }}
-        window.chartData = {{ $chartData | jsonify }};
+    <script>
+        // This script block is for passing chart data to JavaScript
+        window.chartData = {{ .Site.Data.charts.en | jsonify }};
     </script>
     {{ $chartsJS := resources.Get "js/charts.js" }}
-    <script src="{{ $chartsJS.RelPermalink }}"></script
+    <script src="{{ $chartsJS.RelPermalink }}"></script>
 {{ end }}

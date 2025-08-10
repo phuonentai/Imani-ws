@@ -1,7 +1,7 @@
 ---
 title: "Power BI Dashboards"
 description: "Transform your raw data into interactive, real-time business insights with custom-built Power BI dashboards."
-date: 2025-08-10
+date: 2025-08-09
 draft: false
 ---
 

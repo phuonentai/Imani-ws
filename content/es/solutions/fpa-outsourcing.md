@@ -1,6 +1,5 @@
 ---
 title: "FP&A Outsourcing"
-date: 2025-08-10
 description: "Leverage our expert team for your financial planning and analysis without the overhead of a full-time hire."
 ---
 
