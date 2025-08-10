@@ -1,0 +1,33 @@
+# data/menu.yaml
+# The blueprint for the solutions mega menu.
+
+solutions:
+  - title: "Core Services"
+    items:
+      - file: "cash-flow-forecasting"
+        translationKey: "solution-cash-flow"
+        name: "megamenuCashFlowName"
+        description: "megamenuCashFlowDesc"
+      - file: "scenario-planning"
+        translationKey: "solution-scenario-planning"
+        name: "megamenuScenarioPlanningName"
+        description: "megamenuScenarioPlanningDesc"
+      - file: "budget-variance-analysis"
+        translationKey: "solution-budget-analysis"
+        name: "megamenuBudgetAnalysisName"
+        description: "megamenuBudgetAnalysisDesc"
+        
+  - title: "Advanced Solutions"
+    items:
+      - file: "fpa-outsourcing"
+        translationKey: "solution-fpa-outsourcing"
+        name: "megamenuFpaOutsourcingName"
+        description: "megamenuFpaOutsourcingDesc"
+      - file: "power-bi-dashboards"
+        translationKey: "solution-power-bi"
+        name: "megamenuPowerBiName"
+        description: "megamenuPowerBiDesc"
+      - file: "data-integration"
+        translationKey: "solution-data-integration"
+        name: "megamenuDataIntegrationName"
+        description: "megamenuDataIntegrationDesc"

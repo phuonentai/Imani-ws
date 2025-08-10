@@ -10,14 +10,14 @@
 <section id="{{ $solution.id }}" class="py-24 md:py-32 {{ if (mod $index 2) }}bg-secondary{{ end }}">
     <div class="container mx-auto px-6">
         <div class="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
-            {{/* Determine order for text and chart divs */}}
-            {{ $textOrder := "order-2 md:order-1" }}
-            {{ $chartOrder := "order-1 md:order-2" }}
-            {{ if (mod $index 2) }}
-                {{ $textOrder = "" }}
-                {{ $chartOrder = "" }}
-            {{ end }}
-
+  {{/* Determine order for text and chart divs */}}
+{{ $textOrder := "order-2 md:order-1" }}
+{{ $chartOrder := "order-1 md:order-2" }}
+{{ if (mod $index 2) }}
+    {{/* For alternating sections, swap the desktop order */}}
+    {{ $textOrder = "order-2 md:order-2" }}
+    {{ $chartOrder = "order-1 md:order-1" }}
+{{ end }}
             <div class="{{ $textOrder }}">
                 <h2 class="text-3xl md:text-4xl font-bold font-serif mb-4">{{ $solution.title }}</h2>
                 <p class="text-lg text-gray-600 mb-6">{{ $solution.description }}</p>

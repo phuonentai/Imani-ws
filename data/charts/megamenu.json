@@ -1,0 +1,18 @@
+{
+  "labels": ["Q1", "Q2", "Q3", "Q4"],
+  "datasets": [{
+    "label": "Projected Growth",
+    "data": [10, 25, 55, 100],
+    "fill": true,
+    "backgroundColor": "rgba(0, 184, 148, 0.1)",
+    "borderColor": "#00B894",
+    "pointBackgroundColor": "#FFFFFF",
+    "pointBorderColor": "#00B894",
+    "pointHoverBackgroundColor": "#00B894",
+    "pointHoverBorderColor": "#FFFFFF",
+    "tension": 0.4,
+    "borderWidth": 2,
+    "pointRadius": 4,
+    "pointBorderWidth": 2
+  }]
+}

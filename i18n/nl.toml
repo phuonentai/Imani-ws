@@ -122,28 +122,33 @@ other = "Jane bevindt zich op het snijvlak van data en design. Ze is een gecerti
 
 # ... (existing translations)
 
-# Mega Menu Oplossingen
-[megamenuCashFlowName]
-other = "Cashflowprognose"
-[megamenuCashFlowDesc]
-other = "Anticipeer met precisie op uw toekomstige liquiditeit."
-[megamenuScenarioPlanningName]
-other = "Scenarioplanning"
-[megamenuScenarioPlanningDesc]
-other = "Modelleer diverse marktomstandigheden om voorop te blijven."
-[megamenuBudgetAnalysisName]
-other = "Budget- & Variantieanalyse"
-[megamenuBudgetAnalysisDesc]
-other = "Verander statische budgetten in dynamische financiële modellen."
-[megamenuFpaOutsourcingName]
-other = "FP&A Outsourcing"
-[megamenuFpaOutsourcingDesc]
-other = "Benut ons deskundige team voor uw financiële planning."
-[megamenuPowerBiName]
-other = "Power BI-dashboards"
-[megamenuPowerBiDesc]
-other = "Krijg interactieve, realtime bedrijfsinzichten."
-[megamenuDataIntegrationName]
-other = "Data-integratie"
-[megamenuDataIntegrationDesc]
-other = "Consolideer databronnen voor één enkele bron van waarheid."
+
+
+# Mega Menu
+[megamenuCoreServices]
+other = "Kernoplossingen"
+[megamenuDataServices]
+other = "Data- & BI-diensten"
+[megamenuSeeInAction]
+other = "Bekijk Onze Oplossingen in Actie"
+[solutionsChart]
+other = "Financieel Oplossingen Dashboard"
+# ... (existing translations)
+
+# Footer
+[footerTagline]
+other = "Data transformeren in kristalheldere, interactieve prognoses die zelfverzekerde besluitvorming mogelijk maken."
+[footerCompany]
+other = "Bedrijf"
+[footerLegal]
+other = "Wettelijk"
+[footerPrivacy]
+other = "Privacybeleid"
+[footerTerms]
+other = "Servicevoorwaarden"
+[footerSRX]
+other = "Bezoek ons X-profiel"
+[footerSRLinkedIn]
+other = "Bezoek ons LinkedIn-profiel"
+[footerSRFacebook]
+other = "Bezoek ons Facebook-profiel"

@@ -2,6 +2,7 @@
 title: "Budget- & Variantieanalyse"
 date: 2025-08-10
 description: "Transformeer uw statische budget in een levend managementinstrument. Wij helpen u het 'waarom' achter uw financiële prestaties te begrijpen voor snellere koerscorrecties."
+translationKey: "solution-budget-analysis"
 ---
 
 ### Belangrijkste Kenmerken
