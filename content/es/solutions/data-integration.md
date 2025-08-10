@@ -1,6 +1,5 @@
 ---
 title: "Data Integration"
-date: 2025-08-10
 description: "Consolidate your disparate data sources into a single source of truth for reliable and consistent reporting."
 ---
 

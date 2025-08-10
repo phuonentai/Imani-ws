@@ -1,0 +1,181 @@
+{{/* All homepage sections are now in this single file */}}
+
+{{/* --- Hero Section --- */}}
+{{ with .Site.GetPage "/" }}
+<section id="home" class="container mx-auto px-6 py-24 md:py-32 text-center">
+    <h1 class="text-4xl md:text-6xl font-bold font-serif leading-tight mb-4">{{ i18n "heroTitle" | safeHTML }}</h1>
+    <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mb-8">{{ i18n "heroSubtitle" }}</p>
+    <a href="#methode" class="bg-accent text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-opacity-90 transition duration-300 inline-block">{{ i18n "heroCTA" }}</a>
+
+    <div class="mt-16 md:mt-24 relative w-full max-w-5xl mx-auto">
+        <div class="absolute inset-0 bg-gray-200 rounded-xl transform -rotate-2"></div>
+        <div class="relative bg-white p-4 sm:p-6 border border-gray-200 rounded-xl shadow-2xl">
+            <div class="border-b border-gray-200 mb-4">
+                <nav class="flex flex-wrap -mb-px justify-center font-medium">
+                    <button class="dashboard-tab active" data-tab="revenue">{{ i18n "chartTab1" }}</button>
+                    <button class="dashboard-tab" data-tab="cashflow">{{ i18n "chartTab2" }}</button>
+                    <button class="dashboard-tab" data-tab="growth">{{ i18n "chartTab3" }}</button>
+                </nav>
+            </div>
+            <div id="dashboard-content">
+                <div id="tab-revenue" class="dashboard-pane" style="height: 400px;"><canvas id="revenueChart"></canvas></div>
+                <div id="tab-cashflow" class="dashboard-pane hidden" style="height: 400px;"><canvas id="cashflowChart"></canvas></div>
+                <div id="tab-growth" class="dashboard-pane hidden" style="height: 400px;"><canvas id="growthChart"></canvas></div>
+            </div>
+        </div>
+    </div>
+</section>
+{{ end }}
+
+{{/* --- Social Proof Section --- */}}
+{{ with .Site.Data.clients }}
+<section class="py-16 bg-secondary">
+    <div class="container mx-auto px-6">
+        <p class="text-center text-gray-500 font-semibold mb-6">{{ i18n "socialProofTitle" }}</p>
+        <div class="flex flex-wrap justify-center items-center gap-x-8 md:gap-x-16 gap-y-4">
+            {{ range .list }}
+            <span class="font-bold text-gray-400 text-lg">{{ . }}</span>
+            {{ end }}
+        </div>
+    </div>
+</section>
+{{ end }}
+
+{{/* --- Method Section --- */}}
+<section id="methode" class="py-24 md:py-32">
+    <div class="container mx-auto px-6">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold font-serif mb-4">{{ i18n "methodTitle" }}</h2>
+            <p class="text-lg text-gray-600">{{ i18n "methodSubtitle" }}</p>
+        </div>
+        {{ with .Site.Data.method.steps }}
+        <div class="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 mb-20 text-center">
+            {{ range $i, $e := . }}
+                <div class="flex flex-col items-center data-flow-icon">
+                    <div class="bg-secondary p-6 rounded-full mb-4">
+                        {{ .icon | safeHTML }}
+                    </div>
+                    <h3 class="font-serif text-xl font-semibold">{{ .title }}</h3>
+                    <p class="text-gray-500">{{ .subtitle }}</p>
+                </div>
+                {{ if ne (add $i 1) (len $.Site.Data.method.steps) }}
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gray-300 w-12 h-12 my-4 md:my-0 transform md:rotate-0 rotate-90"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                {{ end }}
+            {{ end }}
+        </div>
+        {{ end }}
+    </div>
+</section>
+{{ with .Site.Data.onboarding }}
+<section id="onboarding" class="py-24 md:py-32 bg-secondary">
+    <div class="container mx-auto px-6">
+        <div class="text-center max-w-3xl mx-auto mb-20">
+            <h2 class="text-3xl md:text-4xl font-bold font-serif mb-4">{{ i18n "onboardingTitle" }}</h2>
+            <p class="text-lg text-gray-600">{{ i18n "onboardingSubtitle" }}</p>
+        </div>
+        <div class="timeline-container">
+            {{ range .steps }}
+                {{ $titleKey := printf "%sTitle" .key }}
+                {{ $descKey := printf "%sDesc" .key }}
+            <div class="timeline-item">
+                <div class="timeline-dot">{{ .icon | safeHTML }}</div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="font-serif text-xl font-semibold mb-2">{{ i18n $titleKey }}</h3>
+                    <p class="text-gray-600">{{ i18n $descKey }}</p>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>
+{{ end }}
+
+<section id="security" class="py-24 md:py-32">
+    <div class="container mx-auto px-6">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold font-serif mb-4">{{ i18n "securityTitle" }}</h2>
+            <p class="text-lg text-gray-600">{{ i18n "securitySubtitle" }}</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8 md:gap-12 text-center">
+            {{ range .Site.Data.security.features }}
+                {{ $titleKey := printf "%sTitle" .key }}
+                {{ $descKey := printf "%sDesc" .key }}
+            <div class="flex flex-col items-center">
+                <div class="bg-secondary p-5 rounded-full mb-4">{{ .icon | safeHTML }}</div>
+                <h3 class="font-serif text-xl font-semibold mb-2">{{ i18n $titleKey }}</h3>
+                <p class="text-gray-600">{{ i18n $descKey }}</p>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>
+
+
+
+
+
+<section id="talent" class="py-24 md:py-32">
+    <div class="container mx-auto px-6">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold font-serif mb-4">{{ i18n "talentTitle" }}</h2>
+            <p class="text-lg text-gray-600">{{ i18n "talentSubtitle" }}</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 justify-center max-w-3xl mx-auto">
+            {{/* Loop through members defined in the data file */}}
+            {{ range .Site.Data.talent.members }}
+                {{/* Dynamically create the translation keys */}}
+                {{ $nameKey := printf "%sName" .key }}
+                {{ $titleKey := printf "%sTitle" .key }}
+                {{ $bioKey := printf "%sBio" .key }}
+
+            <div class="talent-card text-center cursor-pointer group"
+                 data-name="{{ i18n $nameKey }}"
+                 data-title="{{ i18n $titleKey }}"
+                 data-bio="{{ i18n $bioKey }}">
+
+                {{/* Check if the image file exists to provide a robust fallback */}}
+                {{ $imagePath := .image }}
+                {{ if and ($imagePath) (fileExists (printf "static%s" $imagePath)) }}
+                    <img src="{{ $imagePath | relURL }}" alt="Portrait of {{ i18n $nameKey }}" class="rounded-full w-48 h-48 mx-auto mb-4 object-cover shadow-lg group-hover:shadow-xl transition-shadow duration-300">
+                {{ else }}
+                    <div class="rounded-full w-48 h-48 mx-auto mb-4 bg-secondary flex items-center justify-center shadow-lg group-hover:shadow-xl transition-shadow duration-300">
+                        <span class="text-5xl font-serif text-gray-500">{{ .initials }}</span>
+                    </div>
+                {{ end }}
+                <h3 class="font-serif text-2xl font-semibold">{{ i18n $nameKey }}</h3>
+                <p class="text-accent-color font-medium">{{ i18n $titleKey }}</p>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>
+
+
+<section id="contact" class="py-24 md:py-32 bg-secondary">
+    <div class="container mx-auto px-6">
+        <div class="bg-white p-8 md:p-16 rounded-lg shadow-xl max-w-4xl mx-auto border border-gray-200">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold font-serif mb-4">{{ i18n "contactTitle" }}</h2>
+            </div>
+            <form id="contact-form" class="space-y-6">
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-700 mb-1">{{ i18n "formFullName" }}</label>
+                        <input type="text" id="name" name="name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent transition">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700 mb-1">{{ i18n "formBusinessEmail" }}</label>
+                        <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent transition">
+                    </div>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="bg-accent text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-opacity-90 transition duration-300">{{ i18n "formSubmit" }}</button>
+                </div>
+            </form>
+            <div id="form-success" class="hidden text-center mt-6 p-4 bg-green-100 text-green-800 rounded-lg">
+                {{ i18n "formSuccessMsg" }}
+            </div>
+        </div>
+    </div>
+</section>

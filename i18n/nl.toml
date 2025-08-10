@@ -118,3 +118,32 @@ other = "Hoofd Datavisualisatie"
 other = "Jane bevindt zich op het snijvlak van data en design. Ze is een gecertificeerde Power BI-professional die uitblinkt in het creëren van intuïtieve, krachtige dashboards die in één oogopslag helderheid bieden voor complexe bedrijfsvragen."
 
 
+
+
+# ... (existing translations)
+
+# Mega Menu Oplossingen
+[megamenuCashFlowName]
+other = "Cashflowprognose"
+[megamenuCashFlowDesc]
+other = "Anticipeer met precisie op uw toekomstige liquiditeit."
+[megamenuScenarioPlanningName]
+other = "Scenarioplanning"
+[megamenuScenarioPlanningDesc]
+other = "Modelleer diverse marktomstandigheden om voorop te blijven."
+[megamenuBudgetAnalysisName]
+other = "Budget- & Variantieanalyse"
+[megamenuBudgetAnalysisDesc]
+other = "Verander statische budgetten in dynamische financiële modellen."
+[megamenuFpaOutsourcingName]
+other = "FP&A Outsourcing"
+[megamenuFpaOutsourcingDesc]
+other = "Benut ons deskundige team voor uw financiële planning."
+[megamenuPowerBiName]
+other = "Power BI-dashboards"
+[megamenuPowerBiDesc]
+other = "Krijg interactieve, realtime bedrijfsinzichten."
+[megamenuDataIntegrationName]
+other = "Data-integratie"
+[megamenuDataIntegrationDesc]
+other = "Consolideer databronnen voor één enkele bron van waarheid."
