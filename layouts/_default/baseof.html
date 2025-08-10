@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode | default "en" }}">
+<html lang="{{ .Language.Lang | default "en" }}">
 <head>
     {{ partial "seo.html" . }}
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
@@ -7,7 +7,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js">
+        
+    </script>
+
 
     {{ $styles := resources.Get "css/main.css" | postCSS }}
     <link rel="stylesheet" href="{{ $styles.RelPermalink }}">
@@ -35,5 +38,120 @@
     {{ $mainJS := resources.Get "js/main.js" }}
     {{ $js := $mainJS | js.Build (dict "params" (dict "charts" site.Data.charts)) }}
     <script src="{{ $js.RelPermalink }}"></script>
+<script>   // Make sure this script is loaded AFTER Alpine.js and Chart.js
+document.addEventListener('alpine:init', () => {
+    Alpine.data('megamenu', function () {
+        return {
+            open: false,
+            chart: null,
+            hoveredLinksCount: 0,
+            totalLinks: 0,
+            // The starting data for our chart
+            baseData: [20, 25, 33, 45, 60],
+
+            init() {
+                // Watch for changes in the hover count and update the chart
+                this.$watch('hoveredLinksCount', () => this.updateChart());
+            },
+            
+            openMenu() {
+                this.open = true;
+                // Use $nextTick to ensure the canvas element is visible before creating the chart
+                this.$nextTick(() => {
+                    // Only initialize the chart once
+                    if (!this.chart) {
+                        this.totalLinks = this.$refs.megamenu.querySelectorAll('.menu-link-trackable').length;
+                        this.createChart();
+                    }
+                });
+            },
+            
+            incrementHover() {
+                if (this.hoveredLinksCount < this.totalLinks) {
+                    this.hoveredLinksCount++;
+                }
+            },
+
+            decrementHover() {
+                if (this.hoveredLinksCount > 0) {
+                    this.hoveredLinksCount--;
+                }
+            },
+
+            createChart() {
+    const canvas = document.getElementById('megamenu-chart');
+    if (!canvas) {
+        console.error('Mega menu chart canvas with id "megamenu-chart" not found!');
+        return; 
+    }
+    const ctx = canvas.getContext('2d');
+    
+    const gradient = ctx.createLinearGradient(0, 0, 0, 160);
+    gradient.addColorStop(0, 'rgba(4, 120, 87, 0.7)');
+    gradient.addColorStop(1, 'rgba(16, 185, 129, 0.3)');
+
+    this.chart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            // NEW: Added labels for the X-axis
+            labels: ['Start', 'Q1', 'Q2', 'Q3', 'Now'],
+            datasets: [{
+                label: 'Performance', // Label for the tooltip
+                data: this.baseData,
+                borderColor: gradient,
+                backgroundColor: 'rgba(16, 185, 129, 0.1)', // Optional: fill color
+                fill: true, // Optional: fill under the line
+                borderWidth: 2, // Thinner line for a detailed view
+                pointRadius: 4, // NEW: Makes data points visible
+                pointBackgroundColor: 'rgba(4, 120, 87, 1)',
+                tension: 0.4 
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: { display: true }, // Legend is still off to keep it clean
+                tooltip: { enabled: true } 
+            },
+            scales: {
+                x: { 
+                    display: true, // NEW: X-axis is now visible
+                    grid: { display: true } // Hides the background grid lines
+                },
+                y: { 
+                    display: true, // NEW: Y-axis is now visible
+                    beginAtZero: true, // Ensures the scale starts at 0
+                    grid: { color: '#e5e7eb' } // Light grid lines
+                } 
+            },
+            animation: {
+                duration: 400,
+                easing: 'easeInOutCubic'
+            }
+        }
+    });
+},
+
+            updateChart() {
+                if (!this.chart) return;
+
+                // Define how much "growth" each hovered link adds
+                const growthFactor = 5;
+
+                // Calculate the new data points. The effect gets stronger towards the end of the line.
+                const newData = this.baseData.map((point, index) => {
+                    const newPoint = point + (this.hoveredLinksCount * growthFactor * (index / this.baseData.length));
+                    return Math.min(newPoint, 100); // Cap the value at 100
+                });
+
+                // Update the chart's dataset and redraw it
+                this.chart.data.datasets[0].data = newData;
+                this.chart.update();
+            }
+        }
+    });
+});  </script>
+  
 </body>
 </html>

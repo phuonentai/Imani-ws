@@ -1,8 +1,9 @@
 ---
 title: "Power BI Dashboards"
 description: "Transform your raw data into interactive, real-time business insights with custom-built Power BI dashboards."
-date: 2025-08-10
+date: 2025-08-09
 draft: false
+translationKey: "solution-power-bi"
 ---
 
 This is the detail page for **Power BI Dashboards**. You can add more detailed content, case studies, or technical specifications here.

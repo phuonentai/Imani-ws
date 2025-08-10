@@ -2,6 +2,72 @@ import { charts } from '@params';
 
 // Wait for the DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', () => {
+
+    // General Chart.js options for a consistent look
+    const chartOptions = {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+            legend: { position: 'top', labels: { font: { family: "'Inter', sans-serif" }}},
+            tooltip: {
+                backgroundColor: '#121212',
+                titleFont: { family: "'Lora', serif", size: 16 },
+                bodyFont: { family: "'Inter', sans-serif", size: 12 },
+            }
+        },
+        scales: {
+            y: { beginAtZero: true, ticks: { font: { family: "'Inter', sans-serif" }}},
+            x: { ticks: { font: { family: "'Inter', sans-serif" }}}
+        }
+    };
+    
+    // Function to initialize the mega menu chart
+    function initMegaMenuChart() {
+        const megamenuChartCtx = document.getElementById('megamenu-chart')?.getContext('2d');
+        if (!megamenuChartCtx) return;
+
+        // Dynamically get the chart data based on the current language
+        const lang = document.documentElement.lang || 'en';
+        const chartData = charts[lang] && charts[lang].revenue ? charts[lang].revenue : charts.en.revenue;
+        
+        // Destroy old chart instance if it exists
+        if (megamenuChartCtx.chart) {
+            megamenuChartCtx.chart.destroy();
+        }
+
+        megamenuChartCtx.chart = new Chart(megamenuChartCtx, {
+            type: 'bar',
+            data: chartData,
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                animation: {
+                    duration: 1500,
+                    easing: 'easeInOutQuad'
+                },
+                plugins: {
+                    legend: { display: false },
+                    tooltip: chartOptions.plugins.tooltip
+                },
+                scales: {
+                    y: { display: false },
+                    x: { display: false }
+                },
+                layout: {
+                    padding: { top: 0, left: 0, right: 0, bottom: 0 }
+                }
+            }
+        });
+    }
+
+    // Initialize the mega menu chart when the menu is hovered over
+    const solutionsMenu = document.querySelector('[x-data="megamenu"]');
+    if (solutionsMenu) {
+        solutionsMenu.addEventListener('mouseenter', () => {
+            initMegaMenuChart();
+        });
+    }
+
     // --- Mobile menu toggle ---
     const mobileMenuButton = document.getElementById('mobile-menu-button');
     const mobileMenu = document.getElementById('mobile-menu');
@@ -78,24 +144,6 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(item);
     });
 
-    // General Chart.js options for a consistent look
-    const chartOptions = {
-        responsive: true,
-        maintainAspectRatio: false,
-        plugins: {
-            legend: { position: 'top', labels: { font: { family: "'Inter', sans-serif" }}},
-            tooltip: {
-                backgroundColor: '#121212',
-                titleFont: { family: "'Lora', serif", size: 16 },
-                bodyFont: { family: "'Inter', sans-serif", size: 12 },
-            }
-        },
-        scales: {
-            y: { beginAtZero: true, ticks: { font: { family: "'Inter', sans-serif" }}},
-            x: { ticks: { font: { family: "'Inter', sans-serif" }}}
-        }
-    };
-
     // Chart 1: Monthly Revenue
     const revenueCtx = document.getElementById('revenueChart')?.getContext('2d');
     if (revenueCtx) new Chart(revenueCtx, { type: 'bar', data: charts.revenue, options: chartOptions });
@@ -119,7 +167,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
- const solutionChartOptions = {
+    const solutionChartOptions = {
         responsive: true,
         maintainAspectRatio: false,
         plugins: {
@@ -205,7 +253,4 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             });
     }
-
-
-    
 });

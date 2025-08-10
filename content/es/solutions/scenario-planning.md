@@ -2,6 +2,7 @@
 title: "Planificación y Análisis de Escenarios"
 date: 2025-08-10
 description: "En el volátil mercado actual, nuestros servicios de planificación de escenarios le permiten modelar el impacto potencial de diversos factores, convirtiendo la incertidumbre en una ventaja estratégica."
+translationKey: "solution-scenario-planning"
 ---
 
 ### Características Clave

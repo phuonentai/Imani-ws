@@ -123,28 +123,49 @@ other = "We proactively align with the NIS2 Directive's requirements, implementi
 
 # ... (existing translations)
 
-# Mega Menu Solutions
-[megamenuCashFlowName]
-other = "Cash Flow Forecasting"
-[megamenuCashFlowDesc]
-other = "Anticipate your future liquidity with precision."
-[megamenuScenarioPlanningName]
-other = "Scenario Planning"
-[megamenuScenarioPlanningDesc]
-other = "Model various market conditions to stay ahead."
-[megamenuBudgetAnalysisName]
-other = "Budget & Variance Analysis"
-[megamenuBudgetAnalysisDesc]
-other = "Turn static budgets into dynamic financial models."
-[megamenuFpaOutsourcingName]
-other = "FP&A Outsourcing"
-[megamenuFpaOutsourcingDesc]
-other = "Leverage our expert team for your financial planning."
-[megamenuPowerBiName]
-other = "Power BI Dashboards"
-[megamenuPowerBiDesc]
-other = "Get interactive, real-time business insights."
-[megamenuDataIntegrationName]
-other = "Data Integration"
-[megamenuDataIntegrationDesc]
-other = "Consolidate data sources for a single source of truth."
+
+
+# Mega Menu
+[megamenuCoreServices]
+other = "Core Solutions"
+[megamenuDataServices]
+other = "Data & BI Services"
+[megamenuSeeInAction]
+other = "See Our Solutions in Action"
+ 
+[solutionsChart]
+other = "Financial Solutions Dashboard"
+
+
+# ... (existing translations)
+
+# Footer
+[footerTagline]
+other = "Transforming data into crystal-clear, interactive forecasts that enable confident decision-making."
+[footerCompany]
+other = "Company"
+[footerLegal]
+other = "Legal"
+[footerPrivacy]
+other = "Privacy Policy"
+[footerTerms]
+other = "Terms of Service"
+[footerSRX]
+other = "Visit our X profile"
+[footerSRLinkedIn]
+other = "Visit our LinkedIn profile"
+[footerSRFacebook]
+other = "Visit our Facebook profile"
+
+# Translations for the solutions menu
+"solutions.dataSecurity" = "Data Security"
+"solutions.riskManagement" = "Risk Management"
+"solutions.complianceAutomation" = "Compliance Automation"
+"solutions.dataGovernance" = "Data Governance"
+"solutions.incidentResponse" = "Incident Response"
+"solutions.threatIntelligence" = "Threat Intelligence"
+"solutions.financialAnalytics" = "Financial Analytics"
+"solutions.marketAnalysis" = "Market Analysis"
+
+# Other translations...
+"seeSolutionsAction" = "See Our Solutions in Action"

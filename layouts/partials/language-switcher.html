@@ -3,7 +3,7 @@
     {{/* Button to show the current language and open the dropdown */}}
     <button @click="open = !open" class="flex items-center text-gray-600 hover:text-accent-color transition duration-300">
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-        <span>{{ .Site.Language.LanguageName }}</span>
+        <span>{{ .Language.LanguageName }}</span>
         <svg class="w-4 h-4 ml-1 transition-transform duration-300" :class="{ 'rotate-180': open }" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
     </button>
     {{/* Dropdown menu with links to other language versions of the page */}}

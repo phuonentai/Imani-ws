@@ -1,7 +1,7 @@
 baseURL = "https://kind-wave-0b3cd8603.2.azurestaticapps.net/"
 languageCode = "en-us"
 title = "Informani | Expert Financial Forecasting & Power BI Dashboards"
-
+defaultContentLanguageInSubdir = true
 
 
 # Set the default language
@@ -64,7 +64,7 @@ defaultContentLanguage = "en"
   [[menu.main]]
     name = "Solutions"
     identifier = "navSolutions" # Add this
-    url = "/#solutions/" # This link is already correct
+    url = "/solutions/" # This link is already correct
     weight = 40
     [menu.main.params]
       has_megamenu = true
@@ -73,3 +73,10 @@ defaultContentLanguage = "en"
     identifier = "navWhyUs" # Add this
     url = "/#talent" # ✅ CHANGED
     weight = 50
+  [[menu.main]]
+    name = "Schedule a Demo"
+    identifier = "scheduleDemo"
+    url = "/#contact"
+    weight = 100
+    [menu.main.params]
+      is_button = true

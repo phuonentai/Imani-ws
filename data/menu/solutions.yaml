@@ -1,0 +1,36 @@
+[
+  {
+    "title": "megamenuCoreServices",
+    "items": [
+      {
+        "name": "megamenuCashFlowName",
+        "key": "cash-flow-forecasting"
+      },
+      {
+        "name": "megamenuScenarioPlanningName",
+        "key": "scenario-planning"
+      },
+      {
+        "name": "megamenuBudgetAnalysisName",
+        "key": "budget-variance-analysis"
+      }
+    ]
+  },
+  {
+    "title": "megamenuDataServices",
+    "items": [
+      {
+        "name": "megamenuFpaOutsourcingName",
+        "key": "fpa-outsourcing"
+      },
+      {
+        "name": "megamenuPowerBiName",
+        "key": "power-bi-dashboards"
+      },
+      {
+        "name": "megamenuDataIntegrationName",
+        "key": "data-integration"
+      }
+    ]
+  }
+]

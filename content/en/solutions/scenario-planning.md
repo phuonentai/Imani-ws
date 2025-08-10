@@ -2,6 +2,7 @@
 title: "Scenarioplanning & Analyse"
 date: 2025-08-10
 description: "In de volatiele markt van vandaag kunt u met onze scenarioplanning de mogelijke impact van diverse factoren modelleren, waardoor onzekerheid een strategisch voordeel wordt."
+translationKey: "solution-scenario-planning"
 ---
 
 ### Belangrijkste Kenmerken
